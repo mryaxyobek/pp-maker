@@ -6,7 +6,7 @@ let loadButton = document.getElementById("loadButton");
 let canvasDownload = document.getElementById("canvasDownload");
 
 let image = new Image();
-image.src = "http://127.0.0.1:5501/images/cartoon_girl-www.pictures-for-profile-uz.netlify.app2.jpg";
+image.src = "cartoon_girl-www.pictures-for-profile-uz.netlify.app.jpg";
 image.onload = function() {
     context.drawImage(image, 0, 0, canvas.width, canvas.height);
 
