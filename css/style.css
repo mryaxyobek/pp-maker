@@ -37,3 +37,6 @@ a,button{
   border: none;
   text-decoration: none;
 }
+.hidden{
+  display: none;
+}
