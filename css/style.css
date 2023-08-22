@@ -11,6 +11,7 @@
   --banana-color: #F508FA;
   --banana-color: #08FA69;
   --black-color: #000;
+  --white-color: #fff;
 }
 
 * {
@@ -59,6 +60,23 @@
   color: var(--links-color);
 }
 
+/* dark mode run  */
+.dark-mode {
+  --heading-color: #F8ECFD;
+  --links-color: #C264FE;
+  --violet-color: #7A08FA;
+  --cool-purple-color: #A82FFC;
+  --heliotrope-color: #C264FE;
+  --pale-purple-color: #1f0041;
+  --star-rating-color: #FF9529;
+  --banana-color: #FFE234;
+  --orange-color: #FA8B08;
+  --banana-color: #F508FA;
+  --banana-color: #08FA69;
+  --black-color: #000;
+  --white-color: #5b00c3;
+}
+
 body::-webkit-scrollbar {
   background: var(--pale-purple-color);
   width: 11px;
@@ -73,7 +91,7 @@ body::-webkit-scrollbar-thumb {
 
 /* container  */
 .container {
-  max-width: 1280px;
+  max-width: 1240px;
   width: 100%;
   padding: 0 20px;
   margin-right: auto;
@@ -110,4 +128,234 @@ button {
 
 a {
   text-decoration: none;
+}
+
+/* header  */
+.header {
+  padding: 28px 0;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.header-parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* nav  */
+.nav-and-darkmode-btn-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  font-family: 'poppins-500', sans-serif;
+  font-size: 18px;
+  line-height: normal;
+}
+
+.header-list-child {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+.header-list-child a {
+  color: var(--links-color);
+}
+
+.pages-link-list-title:hover,
+.wallpapers-list-title:hover,
+.header-list-child a:hover,
+.pages-link-list-child a:hover,
+.wallpapers-list-child a:hover {
+  color: var(--heading-color);
+}
+
+.pages-link-list-title,
+.wallpapers-list-title,
+.header-list-child a,
+.pages-link-list-child a,
+.wallpapers-list-child a {
+  transition: color 0.3s ease;
+}
+
+.pages-link-list,
+.wallpapers-list {
+  visibility: hidden;
+  position: absolute;
+  width: 170px;
+  padding: 10px;
+  background: var(--white-color);
+  border-radius: 8px;
+  font-family: 'poppins-400', sans-serif;
+  font-size: 16px;
+  top: 22px;
+  left: -10px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+  transition: visibility 0.2s ease;
+}
+
+.pages-link-list-title:hover~.pages-link-list,
+.wallpapers-list-title:hover~.wallpapers-list,
+.pages-link-list:hover,
+.wallpapers-list:hover {
+  visibility: visible;
+}
+
+.pages-link-list {
+  width: 190px;
+}
+
+.pages-link-list-child,
+.wallpapers-list-child {
+  position: relative;
+}
+
+.wallpapers-list-child:not(:last-child),
+.pages-link-list-child:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.pages-link-list-child:first-child:before,
+.wallpapers-list-child:first-child:before {
+  content: '';
+  position: absolute;
+  top: -19px;
+  left: 4px;
+  width: 13px;
+  height: 10px;
+  background: var(--white-color);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.wallpapers-list {
+  position: absolute;
+  font-family: 'poppins-400', sans-serif;
+  width: 170px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* dark mode btn  */
+.dark-mode-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 80px;
+  height: 40px;
+  padding: 4px;
+  background: var(--white-color);
+  border-radius: 100px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.sun-icon,
+.moon-icon {
+  z-index: 2;
+  width: 26px;
+  height: 26px;
+}
+
+.sun-icon {
+  margin-left: 3px;
+}
+
+@keyframes sun-animation {
+
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.3, 0.7);
+  }
+
+  95% {
+    transform: scale(0.7, 1.3);
+  }
+}
+
+.sun-animation {
+  transform: scaleX(1);
+  animation: sun-animation 0.5s ease;
+}
+
+.dark-mode-btn-circle-shape {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  bottom: 0;
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+  border-radius: 100px;
+  background: #5300AF;
+  transition: all 0.8s ease;
+}
+
+@keyframes shape-intial-animation {
+  0% {
+    right: 4px;
+    left: auto;
+  }
+
+  49% {
+    right: 4px;
+    left: auto;
+  }
+
+  50% {
+    right: auto;
+    width: 72px;
+  }
+
+  100% {
+    width: 32px;
+  }
+}
+
+.shape-intial-animation {
+  right: auto;
+  animation: shape-intial-animation 0.5s ease;
+}
+
+@keyframes shape-animation {
+  0% {
+    right: auto;
+  }
+
+  49% {
+    right: auto;
+  }
+
+  50% {
+    right: 4px;
+    width: 72px;
+  }
+
+  100% {
+    width: 32px;
+  }
+}
+
+.shape-run {
+  left: auto;
+  right: 4px;
+  animation: shape-animation 0.5s ease;
+}
+
+.moon-icon {
+  margin-right: 3px;
+}
+
+.remove-intial-animation {
+  animation-name: sun-animatio;
 }

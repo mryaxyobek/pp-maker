@@ -10,20 +10,21 @@
 
 <body class="body">
     <header class="header">
-        <div class="container">
+        <div class="container header-parent">
             <!-- logo  -->
             <a href="index.html">
-                <img src="./images/PPmaker-logo.png" alt="ppmaker logo, profile picture maker website logo">
+                <img width="150" height="51" src="./images/PPmaker-logo.png" alt="ppmaker logo, profile picture maker website logo">
             </a>
             <!-- navbar and dark mode button wrapper -->
             <div class="nav-and-darkmode-btn-wrapper">
                 <nav>
                     <ul class="header-list">
                         <li class="header-list-child">
-                            <a href="index.html">Bosh sahifa</a>
+                            <a href="index.html" style="color: var(--heading-color);">Bosh sahifa</a>
                         </li>
+
                         <li class="header-list-child">
-                            <span>Sahifalar</span>
+                            <span class="pages-link-list-title">Sahifalar</span>
                             <ul class="pages-link-list">
                                 <li class="pages-link-list-child">
                                     <a href="picturesforboys.html">Bollar uchun rasmlar</a>
@@ -37,7 +38,7 @@
                             </ul>
                         </li>
                         <li class="header-list-child">
-                            <span>Fon rasmlari</span>
+                            <span class="wallpapers-list-title">Fon rasmlari</span>
                             <ul class="wallpapers-list">
                                 <li class="wallpapers-list-child">
                                     <a href="picturesforboys.html">Fonlar</a>
@@ -47,13 +48,16 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="header-list-child">
+                            <a href="index.html">Yordam</a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- dark mode btn  -->
                 <button class="dark-mode-btn js-dark-mode-btn">
                     <img width="26" height="26" src="./images/sun-icon.svg" alt="sun icon, sun image" class="sun-icon">
                     <div class="dark-mode-btn-circle-shape"></div>
-                    <img width="26" height="26" src="./images/moon-icon.svg" alt="moon icon, moon image" class="moon-icon">
+                    <img width="26" height="26" src="./images/moon-icon.svg" alt="moon icon, moon image" class="moon-icon remove-intial-animation sun-animation">
                 </button>
             </div>
         </div>
