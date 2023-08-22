@@ -4,6 +4,16 @@ const elHeader = document.querySelector('.header');
 const elHeaderLogo = document.querySelector('.header-logo');
 const elPageCardsWrapper = document.querySelectorAll('.pages-cards-wrapper');
 
+window.addEventListener('scroll', function(){
+    console.log(elHeader);
+    if (window.scrollY > 90) {
+        elHeader.classList.add('small-header');
+        elHeaderLogo.classList.add('small-header-logo');
+    }else{
+        elHeader.classList.remove('small-header');
+        elHeaderLogo.classList.remove('small-header-logo');
+    };
+});
 elDarkModeBtn.addEventListener('click', function () {
     elDarkModeBtn.disabled = true;
     setTimeout(function () {
