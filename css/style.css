@@ -89,7 +89,7 @@
   /* card box shadow  */
   --card-shadow: 0 0 0px 0.5px #43008a, 1px 1px 3px 0 #0000005b;
   /* cta color  */
-  --cta-bg-color: linear-gradient(45deg, #290056 10%,60%, #4d00a4);
+  --cta-bg-color: linear-gradient(45deg, #290056 10%, 60%, #4d00a4);
   /* 1px border width to 0px*/
   --border-width: 0px;
 }
@@ -491,9 +491,11 @@ a {
   bottom: 0;
   transition: transform 0.3s ease;
 }
-.white-mountains-img{
+
+.white-mountains-img {
   bottom: calc(50% - 72px);
 }
+
 .image-count-info {
   display: flex;
   position: absolute;
@@ -553,9 +555,12 @@ a {
   color: var(--cool-purple-color);
   background: #FFF;
 }
-.telegram-link img,.email-link img{
+
+.telegram-link img,
+.email-link img {
   margin-right: 3px;
 }
+
 .email-link {
   background: var(--cool-purple-color);
   border: none;
