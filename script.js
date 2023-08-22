@@ -1,5 +1,7 @@
 const elDarkModeBtn = document.querySelector('.js-dark-mode-btn');
 const elPageCards = document.querySelectorAll('.page-card-child');
+const elHeader = document.querySelector('.header');
+const elHeaderLogo = document.querySelector('.header-logo');
 const elPageCardsWrapper = document.querySelectorAll('.pages-cards-wrapper');
 
 elDarkModeBtn.addEventListener('click', function () {
