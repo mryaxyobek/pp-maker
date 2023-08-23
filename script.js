@@ -88,3 +88,9 @@ elPageCardNo4.addEventListener('click', function () {
         elPageCardNo4.children[0].children[1].classList.remove('shooting');
     }, 500);
 }); 
+
+const elHamburgerBtn = document.querySelector('.hamburger-btn');
+
+elHamburgerBtn.addEventListener('click', function(){
+    elHamburgerBtn.classList.toggle('hamburger-menu-active');
+});

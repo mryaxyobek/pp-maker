@@ -48,13 +48,13 @@
     <header class="header">
         <div class="container header-parent">
             <!-- logo  -->
-            <a aria-label="Home" href="index.html">
+            <a aria-label="Home" href="index.html" class="header-logo-link">
                 <img width="150" class="header-logo" height="51" src="./images/PPmaker-logo.png"
                     alt="ppmaker logo, profile picture maker website logo">
             </a>
             <!-- navbar and dark mode button wrapper -->
             <div class="nav-and-darkmode-btn-wrapper">
-                <nav>
+                <nav class="header-nav">
                     <ul class="header-list">
                         <li class="header-list-child">
                             <a href="index.html">Bosh sahifa</a>
@@ -97,6 +97,12 @@
                         class="moon-icon remove-intial-animation sun-animation">
                 </button>
             </div>
+            <!-- navbar btn  -->
+            <btn class="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </btn>
         </div>
     </header>
 
@@ -155,17 +161,19 @@
     <!-- cta  -->
     <section class="cta-section">
         <div class="container cta-parent">
-            <h2 class="cta-title">Taklif va murojaatlar uchun</h2>
+            <h2 class="cta-title">Taklif va murojaatlar</h2>
             <p>Sizni qiziqtirgan savol,taklif va murojaatlar uchun shuningdek, websaytning xato va kamchiliklari haqida
                 quyidagi manzillarga murojaat qiling!</p>
             <div>
-                <a href="https://t.me/mryaxyobek" class="telegram-link">
+                <a aria-label="this is the link to apply via telegram" href="https://t.me/mryaxyobek" class="telegram-link">
                     <img width="24" height="24" src="./images/telegram-icon.svg" alt="telegram icon svg">
-                    Telegram orqali
+                    <span>Telegram orqali</span>
                 </a>
-                <a href="https://pubgn9642@gmail.com" class="email-link">
+                <a aria-label="this is the link to apply via emai.cta-section,.footer{
+                    padding: 50px 0;
+                  }l" href="https://pubgn9642@gmail.com" class="email-link">
                     <img width="24" height="24" src="./images/email-icon.svg" alt="email icon svg">
-                    Email orqali
+                    <span>Email orqali</span>
                 </a>
             </div>
         </div>
@@ -176,7 +184,7 @@
         <div class="footer-top">
             <!-- logo  -->
             <a href="index.html">
-                <img width="150" class="header-logo" height="51" src="./images/PPmaker-logo.png"
+                <img width="150" class="header-logo footer-logo" height="51" src="./images/PPmaker-logo.png"
                     alt="ppmaker logo, profile picture maker website logo">
             </a>
             <nav>
