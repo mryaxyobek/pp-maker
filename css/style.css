@@ -434,7 +434,7 @@ a {
   box-shadow: var(--card-shadow);
 }
 
-.page-card-child:-ms-keyboard-active .page-card-child:hover .page-card-center-img {
+.page-card-child:hover .page-card-center-img {
   transform: scale(1.1);
 }
 
