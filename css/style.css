@@ -7,10 +7,10 @@
   --pale-purple-color: #F8ECFD;
   --star-rating-color: #FF9529;
   --banana-color: #FFE234;
-  --orange-color: #FA8B08;
-  --pink-color: #F508FA;
-  --green-color: #08FA69;
-  --black-color: #000;
+  --orange-color: linear-gradient(140deg, #FA8B08, 60%, #fab508);
+  --pink-color: linear-gradient(140deg, #F508FA, 60%, #b908fa);
+  --green-color: linear-gradient(140deg, #5bff03, 60%, #03ff4f);
+  --black-color: linear-gradient(140deg, #000, 60%, #272727);
   --white-color: #fff;
   /* shape color  */
   --shape-color: #5300AF;
@@ -29,8 +29,8 @@
 }
 
 *:focus {
-  outline: 0.5px solid #7fa8ff;
-  outline-offset: 2px;
+  outline: 2px solid var(--cool-purple-color);
+  outline-offset: 1px;
   border-radius: 6px;
 }
 
@@ -66,7 +66,7 @@
   scroll-behavior: smooth;
   font-family: 'poppins-400', sans-serif;
   color: var(--links-color);
-  padding-top: 146px;
+  padding-top: 106px;
 }
 
 /* dark mode run  */
@@ -129,7 +129,7 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 34px;
   line-height: 40px;
   font-family: poppins-600;
   color: var(--heading-color);
@@ -222,23 +222,23 @@ a {
 }
 
 .pages-link-list-title:hover,
-.wallpapers-list-title:hover,
+.wallpapers-link-list-title:hover,
 .header-list-child a:hover,
 .pages-link-list-child a:hover,
-.wallpapers-list-child a:hover {
+.wallpapers-link-list-child a:hover {
   color: var(--heading-color);
 }
 
 .pages-link-list-title,
-.wallpapers-list-title,
+.wallpapers-link-list-title,
 .header-list-child a,
 .pages-link-list-child a,
-.wallpapers-list-child a {
+.wallpapers-link-list-child a {
   transition: color 0.3s ease;
 }
 
 .pages-link-list,
-.wallpapers-list {
+.wallpapers-link-list {
   visibility: hidden;
   position: absolute;
   width: 170px;
@@ -255,9 +255,9 @@ a {
 }
 
 .pages-link-list-title:hover~.pages-link-list,
-.wallpapers-list-title:hover~.wallpapers-list,
+.wallpapers-link-list-title:hover~.wallpapers-link-list,
 .pages-link-list:hover,
-.wallpapers-list:hover {
+.wallpapers-link-list:hover {
   visibility: visible;
 }
 
@@ -266,17 +266,17 @@ a {
 }
 
 .pages-link-list-child,
-.wallpapers-list-child {
+.wallpapers-link-list-child {
   position: relative;
 }
 
-.wallpapers-list-child:not(:last-child),
+.wallpapers-link-list-child:not(:last-child),
 .pages-link-list-child:not(:last-child) {
   margin-bottom: 3px;
 }
 
 .pages-link-list-child:first-child:before,
-.wallpapers-list-child:first-child:before {
+.wallpapers-link-list-child:first-child:before {
   content: '';
   position: absolute;
   top: -19px;
@@ -287,7 +287,7 @@ a {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
-.wallpapers-list {
+.wallpapers-link-list {
   position: absolute;
   font-family: 'poppins-400', sans-serif;
   width: 170px;
@@ -415,7 +415,7 @@ a {
 
 /* main  */
 .center {
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
 .index-title {
@@ -526,8 +526,7 @@ a {
 
 .cta-title {
   font-family: poppins-700;
-  font-size: 36px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .cta-title~p {
@@ -547,8 +546,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 250px;
-  height: 50px;
+  width: 220px;
+  height: 46px;
   border-radius: 6px;
   border: solid #A82FFC;
   border-width: var(--border-width);

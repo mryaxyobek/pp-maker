@@ -6,7 +6,7 @@ const elPageCardsWrapper = document.querySelectorAll('.pages-cards-wrapper');
 
 window.addEventListener('scroll', function () {
     console.log(elHeader);
-    if (window.scrollY > 90) {
+    if (window.scrollY > 60) {
         elHeader.classList.add('small-header');
         elHeaderLogo.classList.add('small-header-logo');
     } else {
