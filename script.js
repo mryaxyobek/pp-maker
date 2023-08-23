@@ -1,15 +1,32 @@
-// header
+// header and top btn
 const elHeader = document.querySelector('.header');
 const elHeaderLogo = document.querySelector('.header-logo');
+
+// 7top btn 
+const elTopBtn = document.querySelector('.top-btn');
 
 window.addEventListener('scroll', function () {
     if (window.scrollY > 60) {
         elHeader.classList.add('small-header');
         elHeaderLogo.classList.add('small-header-logo');
+        elTopBtn.style.display = 'flex';
     } else {
         elHeader.classList.remove('small-header');
         elHeaderLogo.classList.remove('small-header-logo');
+        elTopBtn.style.display = 'none';
     };
+});
+
+elTopBtn.addEventListener('click',function(){
+    window.scrollTo({
+       top:0,
+       right:0,
+       behavior:"smooth" 
+    });
+    elTopBtn.classList.add('top-to-bottom');
+    setTimeout(function(){
+        elTopBtn.classList.remove('top-to-bottom');
+    },800);
 });
 
 // dark mode 
