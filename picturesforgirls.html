@@ -4,22 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qizlar uchun rasmlar | PP maker</title>
+    <meta id="description" name="description"
+        content="PP maker - profile picture maker,profilga sifatli rasm tayyorlash.">
+    <meta id="keywords" name="keywords"
+        content="pp maker, ppmaker, profil uchun rasmlar yasovchi, profil uchun rasmlar, rasm yasovchi, rasm yasaydigan, profilga multik rasm, multik rasm, multik rasm tayyorlash, profile picture maker, pictures for profile, picture maker, images for profile, cartoon images, cartoon pictures">
+    <meta id="name" name="itemprop" content="PP maker / Profil uchun rasmlar tayyorlash va rasmlar to'plami">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pp-maker.netlify.app/" />
+    <meta property="og:image" content="https://pp-maker.netlify.app/images/PPmaker-logo.png" />
+    <meta property="og:image:width" content="150" />
+    <meta property="og:image:height" content="51" />
+    <meta property="og:image:type" content="image/png" />
+
+    <!-- favicon image -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+
+    <!-- title  -->
+    <title>PP maker | Profile picture maker</title>
+
+    <!-- css  -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-69QP9GDFCW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-69QP9GDFCW');
+    </script>
 </head>
 
 <body class="body">
+    <!-- top btn  -->
+    <button class="top-btn">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 15L12 10L7 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
+    
+    
     <!-- header  -->
     <header class="header">
+        <!-- blur filter  -->
+        <div class="dark-filter"></div>
         <div class="container header-parent">
             <!-- logo  -->
-            <a href="index.html">
+            <a aria-label="Home" href="index.html" class="header-logo-link">
                 <img width="150" class="header-logo" height="51" src="./images/PPmaker-logo.png"
                     alt="ppmaker logo, profile picture maker website logo">
             </a>
             <!-- navbar and dark mode button wrapper -->
             <div class="nav-and-darkmode-btn-wrapper">
-                <nav>
+                <nav class="header-nav">
                     <ul class="header-list">
                         <li class="header-list-child">
                             <a href="index.html">Bosh sahifa</a>
@@ -50,7 +88,7 @@
                             </ul>
                         </li>
                         <li class="header-list-child">
-                            <a href="index.html">Yordam</a>
+                            <a href="contact.html">Yordam</a>
                         </li>
                     </ul>
                 </nav>
@@ -62,27 +100,31 @@
                         class="moon-icon remove-intial-animation sun-animation">
                 </button>
             </div>
+            <!-- navbar btn  -->
+            <btn class="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </btn>
         </div>
     </header>
-
-    <!-- main  -->
-    <main>
-    </main>
 
     <!-- cta  -->
     <section class="cta-section">
         <div class="container cta-parent">
-            <h2 class="cta-title">Taklif va murojaatlar uchun</h2>
+            <h2 class="cta-title">Taklif va murojaatlar</h2>
             <p>Sizni qiziqtirgan savol,taklif va murojaatlar uchun shuningdek, websaytning xato va kamchiliklari haqida
                 quyidagi manzillarga murojaat qiling!</p>
             <div>
-                <a href="https://t.me/mryaxyobek" class="telegram-link">
-                    <img src="./images/telegram-icon.svg" alt="telegram icon svg">
-                    Telegram orqali
+                <a aria-label="this is the link to apply via telegram" href="https://t.me/mryaxyobek" class="telegram-link">
+                    <img width="24" height="24" src="./images/telegram-icon.svg" alt="telegram icon svg">
+                    <span>Telegram orqali</span>
                 </a>
-                <a href="https://pubgn9642@gmail.com" class="email-link">
-                    <img src="./images/email-icon.svg" alt="email icon svg">
-                    Email orqali
+                <a aria-label="this is the link to apply via emai.cta-section,.footer{
+                    padding: 50px 0;
+                  }l" href="https://pubgn9642@gmail.com" class="email-link">
+                    <img width="24" height="24" src="./images/email-icon.svg" alt="email icon svg">
+                    <span>Email orqali</span>
                 </a>
             </div>
         </div>
@@ -93,7 +135,7 @@
         <div class="footer-top">
             <!-- logo  -->
             <a href="index.html">
-                <img width="150" class="header-logo" height="51" src="./images/PPmaker-logo.png"
+                <img width="150" class="header-logo footer-logo" height="51" src="./images/PPmaker-logo.png"
                     alt="ppmaker logo, profile picture maker website logo">
             </a>
             <nav>
@@ -134,7 +176,7 @@
             <!-- social networks list  -->
             <ul class="footer-social-networks-list">
                 <li class="footer-social-networks-list-child">
-                    <a href="https://t.me/portfoel">
+                    <a aria-label="this is telegram link" href="https://t.me/portfoel">
                         <svg class="footer-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24"
                             height="24" viewBox="0 0 28 28">
                             <g clip-path="url(#clip0_35_1198)">
@@ -150,7 +192,7 @@
                     </a>
                 </li>
                 <li class="footer-social-networks-list-child">
-                    <a href="https://t.me/instagram.com/mryaxyobek">
+                    <a aria-label="this is instagram link" href="https://t.me/instagram.com/mryaxyobek">
                         <svg class="footer-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24"
                             height="24" viewBox="0 0 28 28" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -159,7 +201,7 @@
                     </a>
                 </li>
                 <li class="footer-social-networks-list-child">
-                    <a href="https://t.me/mryaxyobek">
+                    <a aria-label="this is operator user link" href="https://t.me/mryaxyobek">
                         <svg class="footer-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24"
                             height="24" viewBox="0 0 28 28" fill="none">
                             <g clip-path="url(#clip0_35_1200)">
@@ -175,7 +217,7 @@
                     </a>
                 </li>
                 <li class="footer-social-networks-list-child">
-                    <a href="https://tel:+998901703181">
+                    <a aria-label="this is telephone number link" href="tel:+998901703181">
                         <svg class="footer-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24"
                             height="24" viewBox="0 0 28 28" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd"
