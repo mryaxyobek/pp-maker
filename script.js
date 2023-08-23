@@ -22,10 +22,18 @@ elDarkModeBtn.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         elDarkModeBtn.childNodes[3].classList.toggle('shape-run');
         elDarkModeBtn.childNodes[3].classList.add('shape-intial-animation');
-        elDarkModeBtn.childNodes[5].classList.remove('remove-intial-animation'); localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        elDarkModeBtn.childNodes[5].classList.remove('remove-intial-animation');
+        localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
     }, 500);
     elDarkModeBtn.childNodes[1].classList.toggle('sun-animation');
     elDarkModeBtn.childNodes[5].classList.toggle('sun-animation');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const darkMode = localStorage.getItem('darkMode');
+    if (darkMode === 'true') {
+        document.body.classList.add('dark-mode');
+    }
 });
 
 // main cards link
