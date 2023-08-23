@@ -1,5 +1,5 @@
 :root {
-  --heading-color: #290056;
+  --heading-color: #34006c;
   --links-color: #5300AF;
   --violet-color: #7A08FA;
   --cool-purple-color: #A82FFC;
@@ -20,8 +20,12 @@
   --cta-bg-color: #ffffff;
   /* 1px border width to 0px*/
   --border-width: 1px;
+  /* lists bg color */
+  --header-lists-bg: #fff;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -35,11 +39,6 @@
 }
 
 /* poppins font  */
-@font-face {
-  font-family: poppins-900;
-  src: url(../fonts/poppins/Poppins-Black.ttf);
-}
-
 @font-face {
   font-family: poppins-700;
   src: url(../fonts/poppins/Poppins-Bold.ttf);
@@ -63,7 +62,6 @@
 /* body  */
 .body {
   background: var(--pale-purple-color);
-  scroll-behavior: smooth;
   font-family: 'poppins-400', sans-serif;
   color: var(--links-color);
   padding-top: 106px;
@@ -72,18 +70,20 @@
 /* dark mode run  */
 .dark-mode {
   --heading-color: #F8ECFD;
-  --links-color: #C264FE;
+  --links-color: #A82FFC;
   --violet-color: #7A08FA;
   --cool-purple-color: #A82FFC;
   --heliotrope-color: #C264FE;
   --pale-purple-color: linear-gradient(45deg, #1f0041, #310066);
   --star-rating-color: #FF9529;
   --banana-color: #FFE234;
-  --orange-color: linear-gradient(140deg, #5b00c3 0%, 20%, #290056);
-  --pink-color: linear-gradient(140deg, #5b00c3 0%, 20%, #290056);
-  --green-color: linear-gradient(140deg, #5b00c3 0%, 20%, #290056);
-  --black-color: linear-gradient(140deg, #5b00c3 0%, 20%, #290056);
+  --orange-color: linear-gradient(140deg, #5b00c3, 20%, #290056);
+  --pink-color: linear-gradient(140deg, #5b00c3, 20%, #290056);
+  --green-color: linear-gradient(140deg, #5b00c3, 20%, #290056);
+  --black-color: linear-gradient(140deg, #5b00c3, 20%, #290056);
   --white-color: #5b00c3;
+  /* lists bg color */
+  --header-lists-bg: linear-gradient(140deg, #310064, 85%, #5b00c3);
   /* shape color  */
   --shape-color: #290056;
   /* card box shadow  */
@@ -92,19 +92,6 @@
   --cta-bg-color: linear-gradient(45deg, #290056 10%, 60%, #4d00a4);
   /* 1px border width to 0px*/
   --border-width: 0px;
-}
-
-body::-webkit-scrollbar {
-
-  background: var(--pale-purple-color);
-  width: 11px;
-}
-
-body::-webkit-scrollbar-thumb {
-  border: 2px var(--pale-purple-color) solid;
-  border-radius: 8px;
-  background: var(--violet-color);
-  opacity: 0.7;
 }
 
 /* container  */
@@ -243,7 +230,7 @@ a {
   position: absolute;
   width: 170px;
   padding: 10px;
-  background: var(--white-color);
+  background: var(--header-lists-bg);
   border-radius: 8px;
   font-family: 'poppins-400', sans-serif;
   font-size: 16px;
@@ -275,8 +262,8 @@ a {
   margin-bottom: 3px;
 }
 
-.pages-link-list-child:first-child:before,
-.wallpapers-link-list-child:first-child:before {
+.pages-link-list-child:first-child::before,
+.wallpapers-link-list-child:first-child::before {
   content: '';
   position: absolute;
   top: -19px;
@@ -413,6 +400,7 @@ a {
   animation-name: sun-animatio;
 }
 
+
 /* main  */
 .center {
   padding: 60px 20px;
@@ -426,7 +414,6 @@ a {
   max-width: 710px;
   font-family: poppins-500;
   margin-bottom: 40px;
-  opacity: 0.7;
 }
 
 .pages-cards-wrapper {
@@ -447,7 +434,7 @@ a {
   box-shadow: var(--card-shadow);
 }
 
-.page-card-child:hover .page-card-center-img {
+.page-card-child:-ms-keyboard-active .page-card-child:hover .page-card-center-img {
   transform: scale(1.1);
 }
 
@@ -484,6 +471,26 @@ a {
 
 .top-right-arrow-icon {
   color: white;
+}
+
+@keyframes shooting {
+
+  0% {
+    transform: scale(1) translate(0px, 0px);
+  }
+
+  50% {
+    transform: scale(0.3) translate(0px, 0px);
+  }
+
+  100% {
+    transform: scale(1) translate(100px, -100px);
+  }
+}
+
+.shooting {
+  transform: translate(100px, -100px);
+  animation: shooting 0.6s ease;
 }
 
 .page-card-center-img {
@@ -570,6 +577,7 @@ a {
 /* footer  */
 .footer {
   padding: 60px 20px 20px;
+  background: var(--pale-purple-color) cover;
 }
 
 .footer-top {
@@ -614,9 +622,11 @@ a {
 .footer-social-networks-list-child:not(:last-child) {
   margin-right: 14px;
 }
-.footer-social-networks-list-child{
+
+.footer-social-networks-list-child {
   height: 24px;
 }
+
 .footer-social-networks-list-child a {
   display: inline-block;
   width: 24px;
@@ -627,7 +637,8 @@ a {
   color: var(--cool-purple-color);
   transition: color 0.3s ease;
 }
-.footer-icon:hover{
+
+.footer-icon:hover {
   color: var(--links-color);
 }
 
@@ -640,11 +651,13 @@ a {
   line-height: normal;
   color: var(--links-color);
 }
-.footer-bottom a{
+
+.footer-bottom a {
   text-decoration: underline;
   color: var(--links-color);
   transition: color 0.3s ease;
 }
-.footer-bottom a:hover{
+
+.footer-bottom a:hover {
   color: var(--heading-color);
 }

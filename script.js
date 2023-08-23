@@ -1,11 +1,8 @@
-const elDarkModeBtn = document.querySelector('.js-dark-mode-btn');
-const elPageCards = document.querySelectorAll('.page-card-child');
+// header
 const elHeader = document.querySelector('.header');
 const elHeaderLogo = document.querySelector('.header-logo');
-const elPageCardsWrapper = document.querySelectorAll('.pages-cards-wrapper');
 
 window.addEventListener('scroll', function () {
-    console.log(elHeader);
     if (window.scrollY > 60) {
         elHeader.classList.add('small-header');
         elHeaderLogo.classList.add('small-header-logo');
@@ -14,6 +11,11 @@ window.addEventListener('scroll', function () {
         elHeaderLogo.classList.remove('small-header-logo');
     };
 });
+
+// dark mode 
+const elDarkModeBtn = document.querySelector('.js-dark-mode-btn');
+
+// dark mode 
 elDarkModeBtn.addEventListener('click', function () {
     elDarkModeBtn.disabled = true;
     setTimeout(function () {
@@ -26,3 +28,39 @@ elDarkModeBtn.addEventListener('click', function () {
     elDarkModeBtn.childNodes[1].classList.toggle('sun-animation');
     elDarkModeBtn.childNodes[5].classList.toggle('sun-animation');
 });
+
+// main cards link
+const elPageCardChils = document.querySelector('.page-card-child');
+const elPageCardNo1 = document.querySelector('.page-card-child-number-1');
+const elPageCardNo2 = document.querySelector('.page-card-child-number-2');
+const elPageCardNo3 = document.querySelector('.page-card-child-number-3');
+const elPageCardNo4 = document.querySelector('.page-card-child-number-4');
+
+elPageCardNo1.addEventListener('click', function () {
+    elPageCardNo1.children[0].children[1].classList.add('shooting');
+    setTimeout(function () {
+        window.location.href = 'picturesforboys.html'
+        elPageCardNo1.children[0].children[1].classList.remove('shooting');
+    }, 500);
+});
+elPageCardNo2.addEventListener('click', function () {
+    elPageCardNo2.children[0].children[1].classList.add('shooting');
+    setTimeout(function () {
+        window.location.href = 'picturesforgirls.html'
+        elPageCardNo2.children[0].children[1].classList.remove('shooting');
+    }, 500);
+});
+elPageCardNo3.addEventListener('click', function () {
+    elPageCardNo3.children[0].children[1].classList.add('shooting');
+    setTimeout(function () {
+        window.location.href = 'pubgmpictures.html'
+        elPageCardNo3.children[0].children[1].classList.remove('shooting');
+    }, 500);
+});
+elPageCardNo4.addEventListener('click', function () {
+    elPageCardNo4.children[0].children[1].classList.add('shooting');
+    setTimeout(function () {
+        window.location.href = 'picturesforboys.html'
+        elPageCardNo4.children[0].children[1].classList.remove('shooting');
+    }, 500);
+}); 
