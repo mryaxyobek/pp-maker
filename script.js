@@ -17,16 +17,16 @@ window.addEventListener('scroll', function () {
     };
 });
 
-elTopBtn.addEventListener('click',function(){
+elTopBtn.addEventListener('click', function () {
     window.scrollTo({
-       top:0,
-       right:0,
-       behavior:"smooth" 
+        top: 0,
+        right: 0,
+        behavior: "smooth"
     });
     elTopBtn.classList.add('top-to-bottom');
-    setTimeout(function(){
+    setTimeout(function () {
         elTopBtn.classList.remove('top-to-bottom');
-    },800);
+    }, 800);
 });
 
 // dark mode 
@@ -64,33 +64,56 @@ elPageCardNo1.addEventListener('click', function () {
     elPageCardNo1.children[0].children[1].classList.add('shooting');
     setTimeout(function () {
         window.location.href = 'picturesforboys.html'
-        elPageCardNo1.children[0].children[1].classList.remove('shooting');
+        elPageCardNo1.removeClassShooting()
     }, 500);
 });
 elPageCardNo2.addEventListener('click', function () {
     elPageCardNo2.children[0].children[1].classList.add('shooting');
     setTimeout(function () {
         window.location.href = 'picturesforgirls.html'
-        elPageCardNo2.children[0].children[1].classList.remove('shooting');
+        elPageCardNo2.removeClassShooting()
     }, 500);
 });
 elPageCardNo3.addEventListener('click', function () {
     elPageCardNo3.children[0].children[1].classList.add('shooting');
     setTimeout(function () {
         window.location.href = 'pubgmpictures.html'
-        elPageCardNo3.children[0].children[1].classList.remove('shooting');
+        elPageCardNo3.removeClassShooting()
     }, 500);
 });
 elPageCardNo4.addEventListener('click', function () {
     elPageCardNo4.children[0].children[1].classList.add('shooting');
     setTimeout(function () {
         window.location.href = 'picturesforboys.html'
-        elPageCardNo4.children[0].children[1].classList.remove('shooting');
+        elPageCardNo4.removeClassShooting()
     }, 500);
-}); 
-
-const elHamburgerBtn = document.querySelector('.hamburger-btn');
-
-elHamburgerBtn.addEventListener('click', function(){
-    elHamburgerBtn.classList.toggle('hamburger-menu-active');
 });
+function removeClassShooting() {
+    children[0].children[1].classList.remove('shooting');
+};
+
+// navbar menu 
+const elHamburgerBtn = document.querySelector('.hamburger-btn');
+const elDarkFilter = document.querySelector('.dark-filter');
+const elHeaderNav = document.querySelector('.header-nav');
+
+elHamburgerBtn.addEventListener('click', function () {
+    elHamburgerBtn.classList.toggle('hamburger-menu-active');
+    elHeaderNav.classList.toggle('header-nav-active');
+    document.body.classList.toggle('overflow-hidden');
+    elDarkFilter.classList.toggle('dark-filter-active');
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            removeNavbar();
+        }
+    });
+});
+elDarkFilter.addEventListener('click', function () {
+    removeNavbar();
+});
+function removeNavbar() {
+    elHamburgerBtn.classList.remove('hamburger-menu-active');
+    elHeaderNav.classList.remove('header-nav-active');
+    document.body.classList.remove('overflow-hidden');
+    elDarkFilter.classList.remove('dark-filter-active');
+};
