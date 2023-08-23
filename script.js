@@ -15,15 +15,14 @@ window.addEventListener('scroll', function () {
 // dark mode 
 const elDarkModeBtn = document.querySelector('.js-dark-mode-btn');
 
-// dark mode 
-elDarkModeBtn.addEventListener('click', function () {
+elDarkModeBtn.addEventListener('click', () => {
     elDarkModeBtn.disabled = true;
     setTimeout(function () {
         elDarkModeBtn.disabled = false;
         document.body.classList.toggle('dark-mode');
         elDarkModeBtn.childNodes[3].classList.toggle('shape-run');
         elDarkModeBtn.childNodes[3].classList.add('shape-intial-animation');
-        elDarkModeBtn.childNodes[5].classList.remove('remove-intial-animation');
+        elDarkModeBtn.childNodes[5].classList.remove('remove-intial-animation'); localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
     }, 500);
     elDarkModeBtn.childNodes[1].classList.toggle('sun-animation');
     elDarkModeBtn.childNodes[5].classList.toggle('sun-animation');
