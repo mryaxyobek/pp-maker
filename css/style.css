@@ -933,6 +933,12 @@ a {
 }
 
 @media only screen and (max-width:750px) {
+  .header{
+    padding: 20px 0;
+  }
+  .small-header{
+    padding: 14px 0;
+  }
   .header-logo-link {
     order: 2;
   }
@@ -1015,8 +1021,16 @@ a {
   .header-list-child span {
     font-size: 15px;
   }
+  .nav-and-darkmode-btn-wrapper{
+    position: relative;
+    width: 64px;
+    height: 32px;
+  }
 
   .dark-mode-btn {
+    position: absolute;
+    left: -8px;
+    top: -4px;
     transform: scale(0.8);
   }
 
@@ -1070,17 +1084,25 @@ a {
 }
 
 @media only screen and (max-width:550px) {
+  .header{
+    padding: 18px 0;
+  }
+  .small-header{
+    padding: 10px 0;
+  }
   h2 {
-    font-size: 28px;
+    font-size: 27px;
   }
 
-  p {
+  .index-title~p,.cta-title~p {
     max-width: 550px;
+    font-size: 15px !important;
+    margin-bottom: 30px;
   }
 
   .telegram-link,
   .email-link {
-    width: 120px;
+    width: 90px;
   }
 
   .telegram-link span,
@@ -1091,7 +1113,7 @@ a {
 
 @media only screen and (max-width:470px) {
   h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .page-card-child {
