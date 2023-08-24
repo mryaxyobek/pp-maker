@@ -2,7 +2,7 @@
 const elHeader = document.querySelector('.header');
 const elHeaderLogo = document.querySelector('.header-logo');
 
-// 7top btn 
+//top btn 
 const elTopBtn = document.querySelector('.top-btn');
 
 window.addEventListener('scroll', function () {
@@ -53,45 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// main cards link
-const elPageCardChils = document.querySelector('.page-card-child');
-const elPageCardNo1 = document.querySelector('.page-card-child-number-1');
-const elPageCardNo2 = document.querySelector('.page-card-child-number-2');
-const elPageCardNo3 = document.querySelector('.page-card-child-number-3');
-const elPageCardNo4 = document.querySelector('.page-card-child-number-4');
-
-elPageCardNo1.addEventListener('click', function () {
-    elPageCardNo1.children[0].children[1].classList.add('shooting');
-    setTimeout(function () {
-        window.location.href = 'picturesforboys.html'
-        elPageCardNo1.removeClassShooting()
-    }, 500);
-});
-elPageCardNo2.addEventListener('click', function () {
-    elPageCardNo2.children[0].children[1].classList.add('shooting');
-    setTimeout(function () {
-        window.location.href = 'picturesforgirls.html'
-        elPageCardNo2.removeClassShooting()
-    }, 500);
-});
-elPageCardNo3.addEventListener('click', function () {
-    elPageCardNo3.children[0].children[1].classList.add('shooting');
-    setTimeout(function () {
-        window.location.href = 'pubgmpictures.html'
-        elPageCardNo3.removeClassShooting()
-    }, 500);
-});
-elPageCardNo4.addEventListener('click', function () {
-    elPageCardNo4.children[0].children[1].classList.add('shooting');
-    setTimeout(function () {
-        window.location.href = 'picturesforboys.html'
-        elPageCardNo4.removeClassShooting()
-    }, 500);
-});
-function removeClassShooting() {
-    children[0].children[1].classList.remove('shooting');
-};
-
 // navbar menu 
 const elHamburgerBtn = document.querySelector('.hamburger-btn');
 const elDarkFilter = document.querySelector('.dark-filter');
@@ -116,4 +77,51 @@ function removeNavbar() {
     elHeaderNav.classList.remove('header-nav-active');
     document.body.classList.remove('overflow-hidden');
     elDarkFilter.classList.remove('dark-filter-active');
+};
+
+// main cards link
+const elPageCardChils = document.querySelector('.page-card-child');
+const elPageCardNo1 = document.querySelector('.page-card-child-number-1');
+const elPageCardNo2 = document.querySelector('.page-card-child-number-2');
+const elPageCardNo3 = document.querySelector('.page-card-child-number-3');
+const elPageCardNo4 = document.querySelector('.page-card-child-number-4');
+
+if (elPageCardNo1) {
+    elPageCardNo1.addEventListener('click', function () {
+        elPageCardNo1.children[0].children[1].classList.add('shooting');
+        setTimeout(function () {
+            window.location.href = 'picturesforboys.html'
+            elPageCardNo1.removeClassShooting()
+        }, 500);
+    });
+}
+if (elPageCardNo2) {
+    elPageCardNo2.addEventListener('click', function () {
+        elPageCardNo2.children[0].children[1].classList.add('shooting');
+        setTimeout(function () {
+            window.location.href = 'picturesforgirls.html'
+            elPageCardNo2.removeClassShooting()
+        }, 500);
+    });
+}
+if (elPageCardNo3) {
+    elPageCardNo3.addEventListener('click', function () {
+        elPageCardNo3.children[0].children[1].classList.add('shooting');
+        setTimeout(function () {
+            window.location.href = 'pubgmpictures.html'
+            elPageCardNo3.removeClassShooting()
+        }, 500);
+    });
+}
+if (elPageCardNo4) {
+    elPageCardNo4.addEventListener('click', function () {
+        elPageCardNo4.children[0].children[1].classList.add('shooting');
+        setTimeout(function () {
+            window.location.href = 'picturesforboys.html'
+            elPageCardNo4.removeClassShooting()
+        }, 500);
+    });
+}
+function removeClassShooting() {
+    children[0].children[1].classList.remove('shooting');
 };
