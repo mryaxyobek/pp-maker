@@ -1,3 +1,4 @@
+import { listInformations } from './listInformations.js';
 // header and top btn
 const elHeader = document.querySelector('.header');
 const elHeaderLogo = document.querySelector('.header-logo');
