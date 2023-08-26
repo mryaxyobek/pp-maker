@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const darkMode = localStorage.getItem('darkMode');
     if (darkMode === 'true') {
         document.body.classList.add('dark-mode');
+        elDarkModeBtn.childNodes[3].classList.add('shape-run');
+        elDarkModeBtn.childNodes[1].classList.add('sun-animation');
+        elDarkModeBtn.childNodes[5].classList.remove('remove-intial-animation','sun-animation');
     }
 });
 
@@ -81,58 +84,52 @@ function removeNavbar() {
 };
 
 // main cards link
-const elPageCardChils = document.querySelector('.page-card-child');
+const elPageCardChilds = document.querySelectorAll('.page-card-child');
 const elPageCardNo1 = document.querySelector('.page-card-child-number-1');
 const elPageCardNo2 = document.querySelector('.page-card-child-number-2');
 const elPageCardNo3 = document.querySelector('.page-card-child-number-3');
 const elPageCardNo4 = document.querySelector('.page-card-child-number-4');
 
+elPageCardChilds.forEach(function (e) {
+    e.addEventListener('click', function () {
+        e.children[0].children[1].classList.add('shooting');
+        setTimeout(function () {
+            e.children[0].children[1].classList.remove('shooting');
+        }, 700);
+    });
+});
+
 if (elPageCardNo1) {
     elPageCardNo1.addEventListener('click', function () {
-        elPageCardNo1.children[0].children[1].classList.add('shooting');
         setTimeout(function () {
-            window.location.href = 'picturesforboys.html'
-            elPageCardNo1.removeClassShooting()
+            window.location.href = 'picturesforboys.html';
         }, 500);
     });
-}
-if (elPageCardNo2) {
     elPageCardNo2.addEventListener('click', function () {
-        elPageCardNo2.children[0].children[1].classList.add('shooting');
         setTimeout(function () {
-            window.location.href = 'picturesforgirls.html'
-            elPageCardNo2.removeClassShooting()
+            window.location.href = 'picturesforgirls.html';
         }, 500);
     });
-}
-if (elPageCardNo3) {
     elPageCardNo3.addEventListener('click', function () {
-        elPageCardNo3.children[0].children[1].classList.add('shooting');
         setTimeout(function () {
-            window.location.href = 'pubgmpictures.html'
-            elPageCardNo3.removeClassShooting()
+            window.location.href = 'pubgmpictures.html';
         }, 500);
     });
-}
-if (elPageCardNo4) {
     elPageCardNo4.addEventListener('click', function () {
-        elPageCardNo4.children[0].children[1].classList.add('shooting');
         setTimeout(function () {
-            window.location.href = 'picturesforboys.html'
-            elPageCardNo4.removeClassShooting()
+            window.location.href = 'picturesforboys.html';
         }, 500);
     });
+}else{
+    console.log('Page Card link Child Not Found(121=>)');
 }
-function removeClassShooting() {
-    children[0].children[1].classList.remove('shooting');
-};
 
 const elImagesList = document.querySelector('.images-list');
 
 if (elImagesList) {
     listInformations.map(e => {
         elImagesList.innerHTML += `<li class="images-list-child">
-        <img src=${e.imgSrc} alt="${e.imgAlt} image">
+        <img quality-image=${e.qualityImgSrc} src=${e.imgSrc} alt="${e.imgAlt} image">
         <div class="images-list-child-bottom">
             <div>
                 <h3>${e.title}</h3>
@@ -157,3 +154,43 @@ if (elImagesList) {
     </li>`
     })
 };
+
+// // draw image
+
+// let input = document.querySelector(".textInput");
+// let elAddNameBtn = document.querySelector(".js-add-name-btn");
+// let elDownLoadBtn = document.querySelector(".js-download-btn");
+// let elEditBtn = document.querySelector(".edit-btn");
+// let elButtonsWrapperSecondChild = document.querySelector(".buttons-wrapper-second-child");
+// let elButtonsWrapperFirstChild = document.querySelector(".buttons-wrapper-first-child");
+
+// let canvas = document.createElement('canvas');
+// let context = canvas.getContext("2d");
+// canvas.style.fontFamily = 'akhilona';
+// canvas.width = '1000'
+// canvas.height = '1000'
+
+// let image = new Image();
+// image.src = "./images/cartoon-girl(uploaded-profil-uchun-rasmlar.netlify.app)-image.jpg";
+// image.onload = function () {
+//     let elform = document.querySelector('.form');
+    
+//     context.fontFamily = 'hadnich'
+//     context.drawImage(image, 0, 0, 1000, 1000);
+//     context.font = "100px hadnich";
+
+//     elform.addEventListener('submit', function (e) {
+//         e.preventDefault();
+
+//         let ming = 1000 - context.measureText(input.value).width;
+//         let ming2 = ming - ming / 2;
+//         context.clearRect(0, 0, 1000, 1000);
+//         context.drawImage(image, 0, 0, 1000, 1000);
+//         context.fillText(input.value, ming2, 880);
+
+//         const pngDataUrl = canvas.toDataURL("image/png");
+//         elDownLoadBtn.href = pngDataUrl;
+//         elButtonsWrapperFirstChild.classList.add('right-100')
+//         elButtonsWrapperSecondChild.classList.remove('left-110')
+//     });
+// };
