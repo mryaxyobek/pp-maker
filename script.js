@@ -166,7 +166,7 @@ elMainImage.onload = () => {
     setTimeout(function(){
         elIMageDownloadAnm.classList.add('hidden');
         console.log(1);
-    },100);
+    },1000);
 }
 
 // other 
