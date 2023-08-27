@@ -163,7 +163,10 @@ elMainImage.addEventListener('load',function(){
     elIMageDownloadAnm.classList.remove('hidden');
 });
 elMainImage.onload = () => {
-    elIMageDownloadAnm.classList.add('hidden');
+    setTimeout(function(){
+        elIMageDownloadAnm.classList.add('hidden');
+        console.log(1);
+    },100);
 }
 
 // other 
