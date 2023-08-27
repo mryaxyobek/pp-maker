@@ -1847,6 +1847,10 @@ a {
 }
 
 @media only screen and (max-width:600px) {
+  .hamburger-btn {
+    transform: scale(0.88);
+  }
+
   .hero-main-details {
     height: 320px;
   }
