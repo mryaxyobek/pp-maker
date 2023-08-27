@@ -155,37 +155,45 @@ if (elImagesList) {
     })
 };
 
-// animation
+// 
 const elMainImage = document.querySelector('.main-image');
 const elIMageDownloadAnm = document.querySelector('.image-download-animation');
-
-// other 
-const elCreationIMageWrapper = document.querySelector('.image-creation-wrapper');
-const elCloseIMageCreationBtn = document.querySelector('.close-image-creation-wrapper-window-btn');
-
-elCloseIMageCreationBtn.addEventListener('click', function(){
-    elCreationIMageWrapper.classList.add('hidden');
-});
-
+const elCreationImageDarkFilter = document.querySelector('.image-creation-dark-filter');
 const createImageBtn = document.querySelectorAll('.create-image-btn');
 
-createImageBtn.forEach(function(e){
-    e.addEventListener('click', function(){
-    elIMageDownloadAnm.classList.remove('hidden');
-    // 
-    elMainImage.onload = () => {
-        setTimeout(function(){
-            elIMageDownloadAnm.classList.add('hidden');
-        },1000);
-    }
-    // 
-    elCreationIMageWrapper.classList.remove('hidden');
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') {
-        elCreationIMageWrapper.classList.add('hidden');
-        }else{console.log('image creation place not found');};
-    });
-    elMainImage.setAttribute('src',`${e.getAttribute('quality-image')}`);
+createImageBtn.forEach(function (e) {
+    e.addEventListener('click', function () {
+        const elCreationIMageWrapper = document.querySelector('.image-creation-wrapper');
+        const elCloseIMageCreationBtn = document.querySelector('.close-image-creation-wrapper-window-btn');
+        // 
+        elMainImage.setAttribute('src', `${e.getAttribute('quality-image')}`);
+        //  
+        elIMageDownloadAnm.classList.remove('hidden');
+        // 
+        elMainImage.onload = () => {
+            setTimeout(function () {
+                elIMageDownloadAnm.classList.add('hidden');
+            },500);
+        };
+        // 
+        elCreationIMageWrapper.classList.remove('hidden-2');
+        elCreationImageDarkFilter.classList.remove('hidden');
+        // 
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                elCreationIMageWrapper.classList.add('hidden-2');
+                elCreationImageDarkFilter.classList.add('hidden');
+            } else { console.log('image creation place not found'); };
+        });
+        elCreationImageDarkFilter.addEventListener('click', function(){
+            elCreationIMageWrapper.classList.add('hidden-2');
+                elCreationImageDarkFilter.classList.add('hidden');
+            });
+        //     
+        elCloseIMageCreationBtn.addEventListener('click', function () {
+            elCreationIMageWrapper.classList.add('hidden-2');
+            elCreationImageDarkFilter.classList.add('hidden');
+        });
     });
 });
 
