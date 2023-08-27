@@ -155,6 +155,40 @@ if (elImagesList) {
     })
 };
 
+// animation
+const elMainImage = document.querySelector('.main-image');
+const elIMageDownloadAnm = document.querySelector('.image-download-animation');
+
+elMainImage.addEventListener('load',function(){
+    elIMageDownloadAnm.classList.remove('hidden');
+});
+elMainImage.onload = () => {
+    elIMageDownloadAnm.classList.add('hidden');
+}
+
+// other 
+const elCreationIMageWrapper = document.querySelector('.image-creation-wrapper');
+const elCloseIMageCreationBtn = document.querySelector('.close-image-creation-wrapper-window-btn');
+
+elCloseIMageCreationBtn.addEventListener('click', function(){
+    elCreationIMageWrapper.classList.add('hidden');
+});
+
+const createImageBtn = document.querySelectorAll('.create-image-btn');
+
+createImageBtn.forEach(function(e){
+    e.addEventListener('click', function(){
+    elCreationIMageWrapper.classList.remove('hidden');
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+        elCreationIMageWrapper.classList.add('hidden');
+        }else{console.log('image creation place not found');};
+    });
+    elMainImage.setAttribute('src',`${e.getAttribute('quality-image')}`);
+    });
+});
+
+
 // // draw image
 
 // let input = document.querySelector(".textInput");
