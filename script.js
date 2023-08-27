@@ -159,16 +159,6 @@ if (elImagesList) {
 const elMainImage = document.querySelector('.main-image');
 const elIMageDownloadAnm = document.querySelector('.image-download-animation');
 
-elMainImage.addEventListener('load',function(){
-    elIMageDownloadAnm.classList.remove('hidden');
-});
-elMainImage.onload = () => {
-    setTimeout(function(){
-        elIMageDownloadAnm.classList.add('hidden');
-        console.log(1);
-    },1000);
-}
-
 // other 
 const elCreationIMageWrapper = document.querySelector('.image-creation-wrapper');
 const elCloseIMageCreationBtn = document.querySelector('.close-image-creation-wrapper-window-btn');
@@ -181,6 +171,14 @@ const createImageBtn = document.querySelectorAll('.create-image-btn');
 
 createImageBtn.forEach(function(e){
     e.addEventListener('click', function(){
+    elIMageDownloadAnm.classList.remove('hidden');
+    // 
+    elMainImage.onload = () => {
+        setTimeout(function(){
+            elIMageDownloadAnm.classList.add('hidden');
+        },1000);
+    }
+    // 
     elCreationIMageWrapper.classList.remove('hidden');
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
