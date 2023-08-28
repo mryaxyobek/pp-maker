@@ -895,36 +895,7 @@ a {
 .close-image-creation-wrapper-window-btn:focus {
   outline-offset: -2px;
   outline-color: white;
-}
-
-.circle-shapes {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  top: 40px;
-  right: calc(50% - 140px);
-  border-radius: 100%;
-  background: #7A08FA;
-}
-
-.circle-shapes:nth-child(2) {
-  width: 60px;
-  height: 60px;
-  right: 100px;
-  top: -17px;
-  filter: blur(2px);
-  background: #A82FFC;
-}
-
-.circle-shapes:nth-child(3) {
-  width: 200px;
-  height: 200px;
-  background: #F508FA;
-  top: auto;
-  bottom: 40px;
-  right: -80px;
-  filter: blur(1px);
-}
+} 
 
 .image-creation-place-child {
   display: grid;
