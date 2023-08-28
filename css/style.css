@@ -1002,6 +1002,7 @@ a {
 }
 
 .name-input {
+  border: 1px solid white;
   margin: 0;
 }
 
@@ -2093,9 +2094,11 @@ a {
   .header-nav {
     width: 250px;
   }
-  .dark-mode-btn{
+
+  .dark-mode-btn {
     transform: scale(0.7);
   }
+
   h2 {
     font-size: 22px;
   }
@@ -2154,6 +2157,21 @@ a {
 
   .image-creation-place {
     padding: 0;
+    background: #9700FF;
+  }
+
+  .image-creation-place-child {
+    border-radius: 0px;
+  }
+
+  .create-image-form {
+    border-radius: 0px 0 0 0;
+  }
+
+  .font-family-changer,
+  .name-adder-btn,
+  .image-downloader-link {
+    margin-top: 16px;
   }
 }
 
@@ -2174,11 +2192,5 @@ a {
 
   .hero-title {
     font-size: 18px;
-  }
-
-  .font-family-changer,
-  .name-adder-btn,
-  .image-downloader-link {
-    margin-top: 10px;
   }
 }
