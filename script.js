@@ -2,6 +2,7 @@ import { listInformations } from './listInformations.js';
 // header and top btn
 const elHeader = document.querySelector('.header');
 const elHeaderLogo = document.querySelector('.header-logo');
+const elHeaderLogoLink = document.querySelector('.header-logo-link');
 
 //top btn 
 const elTopBtn = document.querySelector('.top-btn');
@@ -10,10 +11,12 @@ window.addEventListener('scroll', function () {
     if (window.scrollY > 60) {
         elHeader.classList.add('small-header');
         elHeaderLogo.classList.add('small-header-logo');
+        elHeaderLogoLink.classList.add('small-header-logo');
         elTopBtn.style.display = 'flex';
     } else {
         elHeader.classList.remove('small-header');
         elHeaderLogo.classList.remove('small-header-logo');
+        elHeaderLogoLink.classList.remove('small-header-logo');
         elTopBtn.style.display = 'none';
     };
 });
@@ -222,3 +225,10 @@ createImageBtn.forEach(function (e) {
         });
     });
 });
+const elImgSectionP = document.querySelector('.images-section-description');
+
+if (window.width > 600) {
+    elImgSectionP.textContent = "Profilingiz uchun quyidagi yoqtirgan rasmingizni tanlab ismingizni kiriting va rasmni yuklab oling.O'g'il bollar uchun o'ng tomondagi tugmani bosishingiz mumkin.";
+}else{
+    elImgSectionP.textContent = "Profilingiz uchun quyidagi yoqtirgan rasmingizni tanlab ismingizni kiriting va rasmni yuklab oling"
+}
