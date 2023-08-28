@@ -129,13 +129,13 @@ const elImagesList = document.querySelector('.images-list');
 if (elImagesList) {
     listInformations.map(e => {
         elImagesList.innerHTML += `<li class="images-list-child">
-        <img src=${e.imgSrc} alt="${e.imgAlt} image">
+        <img width="378" height="378" src=${e.imgSrc} alt="cartoon girl image for profile">
         <div class="images-list-child-bottom">
             <div>
                 <h3>${e.title}</h3>
                 <div class="downloads-count">
                     <span>12049</span>
-                    <img width="379" height="379" src="./images/download-icon.svg" alt="download icon">
+                    <img width="17" height="17" src="./images/download-icon.svg" alt="download icon">
                 </div>
             </div>
             <button class="display-image-btn">

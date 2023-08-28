@@ -747,7 +747,10 @@ a {
 }
 
 .images-list-child {
+  display: flex;
+  flex-direction: column;
   border-radius: 8px;
+  width: 100%;
   background: var(--white-to-violet);
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
   padding: 4px;
@@ -755,7 +758,9 @@ a {
 
 .images-list-child img:nth-child(1) {
   width: 100%;
-  filter: brightness(0.97);
+  height: 100%;
+  aspect-ratio:1 / 1 !important;
+  object-fit: cover;
   border-radius: 7px 7px 0 0;
 }
 
