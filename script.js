@@ -131,13 +131,7 @@ if (elImagesList) {
         elImagesList.innerHTML += `<li class="images-list-child">
         <img width="378" height="378" src=${e.imgSrc} alt="cartoon girl image for profile">
         <div class="images-list-child-bottom">
-            <div>
-                <h3>${e.title}</h3>
-                <div class="downloads-count">
-                    <span>12049</span>
-                    <img width="17" height="17" src="./images/download-icon.svg" alt="download icon">
-                </div>
-            </div>
+            <h3>${e.title}</h3>
             <button class="display-image-btn">
                 <span>Rasmni ko'rish</span>
                 <svg class="image-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -178,25 +172,28 @@ createImageBtn.forEach(function (e) {
         // 
         elCreationIMageWrapper.classList.remove('hidden-2');
         elCreationImageDarkFilter.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
         // 
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 elCreationIMageWrapper.classList.add('hidden-2');
                 elCreationImageDarkFilter.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
             } else { console.log('image creation place not found'); };
         });
         elCreationImageDarkFilter.addEventListener('click', function () {
             elCreationIMageWrapper.classList.add('hidden-2');
             elCreationImageDarkFilter.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
         });
         //     
         elCloseIMageCreationBtn.addEventListener('click', function () {
             elCreationIMageWrapper.classList.add('hidden-2');
             elCreationImageDarkFilter.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
         });
         // draw image
         let elNameInput = document.querySelector(".name-input");
-        // let elAddNameBtn = document.querySelector(".name-adder-btn");
         let elDownLoadBtn = document.querySelector(".image-downloader-link");
 
         let canvas = document.createElement('canvas');

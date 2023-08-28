@@ -179,7 +179,7 @@ a {
     bottom: 10px;
   }
 
-  1000% {
+  100% {
     opacity: 1;
     bottom: 40px;
   }
@@ -759,44 +759,21 @@ a {
 .images-list-child img:nth-child(1) {
   width: 100%;
   height: 100%;
-  aspect-ratio:1 / 1 !important;
   object-fit: cover;
   border-radius: 7px 7px 0 0;
 }
 
 .images-list-child-bottom {
   padding: 8px;
-  background: var(--white-to-violet);
+  background: transparent;
   border-radius: 0 0 8px 8px;
-}
-
-.images-list-child-bottom div:nth-child(1) {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
 }
 
 .images-list-child-bottom h3 {
   font-size: 17px;
   font-family: poppins-600;
   color: var(--heading-color);
-}
-
-.downloads-count {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #FF9529;
-  font-size: 14px;
-  border-radius: 4px;
-  line-height: 16px;
-}
-
-.downloads-count img {
-  width: 17px;
-  height: 17px;
-  margin-left: 3px;
+  margin-bottom: 10px;
 }
 
 .display-image-btn,
@@ -900,7 +877,7 @@ a {
 .close-image-creation-wrapper-window-btn:focus {
   outline-offset: -2px;
   outline-color: white;
-} 
+}
 
 .image-creation-place-child {
   display: grid;
@@ -1553,15 +1530,15 @@ a {
   .name-input {
     margin: 0;
   }
+
+  .images-list {
+    grid-template-columns: auto auto;
+  }
 }
 
 @media only screen and (max-width:800px) {
   .images-section-description-wrapper p {
     max-width: 500px;
-  }
-
-  .images-list {
-    grid-template-columns: auto auto;
   }
 }
 
@@ -1703,8 +1680,20 @@ a {
     grid-template-columns: auto;
   }
 
+  .page-card-child {
+    height: 360px;
+  }
+
   .page-card-title {
     font-size: 22px;
+  }
+
+  .page-card-center-img {
+    width: 170px;
+  }
+
+  .white-mountains-img {
+    width: 280px;
   }
 
   .telegram-link,
@@ -1795,14 +1784,22 @@ a {
 
 @media only screen and (max-width:700px) {
   .image-creation-place {
-    height: 90vh;
+    height: 100vh;
     overflow-y: auto;
+    display: block;
+    padding: 40px;
+  }
+
+  .image-creation-dark-filter {
+    display: none;
   }
 
   .image-creation-place-child {
-    grid-template-columns: auto;
-    margin-top: auto;
+    display: block;
+    position: relative;
+    max-width: 350px;
     height: auto;
+    margin: auto;
   }
 
   .image-creation-place-image-wrapper {
@@ -1861,19 +1858,24 @@ a {
   .hero-bottom {
     margin-bottom: 10px;
   }
+
+  .images-list {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+
+  .images-list-child {
+    max-width: 400px;
+  }
 }
 
 @media only screen and (max-width:550px) {
-  *:focus {
-    outline: none;
-  }
-
   .header {
     padding: 18px 0;
   }
 
   .small-header {
-    padding: 6px 0;
+    padding: 8px 0;
   }
 
   h2 {
@@ -1894,19 +1896,19 @@ a {
     margin-bottom: 30px;
   }
 
+  .footer,
+  .center {
+    padding: 40px 20px;
+  }
+
   .telegram-link,
   .email-link {
-    width: 90px;
+    width: 120px;
   }
 
   .telegram-link span,
   .email-link span {
     display: none;
-  }
-
-  .images-list {
-    grid-template-columns: auto;
-    justify-content: center;
   }
 
   .images-list-child {
@@ -1916,23 +1918,57 @@ a {
 
 @media only screen and (max-width:470px) {
   .body {
-    padding-top: 84px;
+    padding-top: 64px;
+  }
+
+  .container {
+    padding: 0 14px;
+  }
+
+  .header {
+    padding: 8px 0;
+  }
+
+  .cta-section,
+  .images-section,
+  .hero {
+    padding: 30px 0;
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 23px;
   }
 
-  .page-card-child {
-    border-radius: 40px;
+  .index-title,
+  .cta-title {
+    margin-bottom: 10px;
   }
+
+  .index-title~p,
+  .cta-title~p {
+    margin-bottom: 20px;
+  }
+
 
   .image-count-info {
     border-radius: 40px 0;
   }
 
+  .page-card-child {
+    border-radius: 40px;
+    height: 300px;
+  }
+
   .page-card-title {
     font-size: 19px;
+  }
+
+  .page-card-center-img {
+    width: 150px;
+  }
+
+  .white-mountains-img {
+    width: 250px;
   }
 
   .top-right-arrow-icon {
@@ -1942,16 +1978,22 @@ a {
 
   .center,
   .footer {
-    padding: 40px 20px;
+    padding: 30px 14px;
+  }
+
+  .telegram-link,
+  .email-link {
+    width: 100px;
+
   }
 
   .hero-main-details {
     padding: 20px;
-    height: 260px;
+    height: 300px;
   }
 
   .hero-bg {
-    height: 260px;
+    height: 300px;
   }
 
   .hero-home-link {
@@ -2009,6 +2051,37 @@ a {
   .hero-bg {
     border-radius: 0;
   }
+
+  .images-list-child {
+    max-width: 430px;
+  }
+
+  .image-creation-place-child {
+    display: grid;
+    grid-template-columns: auto;
+    max-width: 470px;
+    max-height: 1000px;
+  }
+
+  .image-creation-place-image-wrapper {
+    max-width: 470px;
+    max-height: 470px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-image {
+    max-width: 470px;
+    max-height: 470px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .create-image-form {
+    max-width: 470px;
+    max-height: 100%;
+  }
 }
 
 @media only screen and (max-width:400px) {
@@ -2020,10 +2093,25 @@ a {
   .header-nav {
     width: 250px;
   }
+  .dark-mode-btn{
+    transform: scale(0.7);
+  }
+  h2 {
+    font-size: 22px;
+  }
 
   .page-card-child {
     height: 270px;
     padding: 20px 20px 0;
+  }
+
+  .page-card-title {
+    font-size: 17px;
+  }
+
+  .top-right-arrow-icon {
+    width: 36px;
+    height: 36px;
   }
 
   .page-card-center-img:not(:last-child) {
@@ -2034,8 +2122,9 @@ a {
     width: 200px !important;
   }
 
-  .hero-main-details {
-    height: 250px;
+  .footer-bottom div {
+    max-width: 370px;
+    font-size: 12px;
   }
 
   .hero-dark-filter {
@@ -2063,28 +2152,20 @@ a {
     margin-right: 12px;
   }
 
-  .image-creation-place-image-wrapper {
-    max-width: auto;
-    max-height: auto;
-    width: 100%;
-    height: 100%;
-  }
-
-  .main-image {
-    max-width: auto;
-    max-height: auto;
-    width: 100%;
-    height: 100%;
-  }
-
-  .create-image-form {
-    height: 300px;
+  .image-creation-place {
+    padding: 0;
   }
 }
 
 @media only screen and (max-width:345px) {
-  .hero-main-details {
-    height: 230px;
+  .page-card-child {
+    height: 250px;
+  }
+
+  .image-count-info {
+    width: 180px;
+    height: 30px;
+    font-size: 11.5px !important;
   }
 
   .hero-home-link {
