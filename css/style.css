@@ -1778,7 +1778,10 @@ a {
 
   .header-list-child:not(:last-child) {
     padding-bottom: 10px;
-    /* border-bottom: 1px solid black; */
+  }
+
+  .footer-lists-wrapper {
+    max-width: 600px;
   }
 
   .pages-link-list,
@@ -2182,7 +2185,9 @@ a {
   .footer {
     padding: 30px 14px;
   }
-
+  .footer-lists-wrapper .header-list-child{
+    text-align: left;
+  }
   .telegram-link,
   .email-link {
     width: 100px;
