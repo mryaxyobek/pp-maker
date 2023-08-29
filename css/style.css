@@ -82,7 +82,7 @@ html {
   background: var(--pale-purple-color);
   font-family: 'poppins-400', sans-serif;
   color: var(--links-color);
-  padding-top: 106px;
+  padding-top: 91px;
 }
 
 /* dark mode run  */
@@ -1335,6 +1335,9 @@ a {
 }
 
 @media only screen and (max-width:1000px) {
+  .body {
+    padding-top: 88px;
+  }
 
   .header-logo,
   .header-logo-link {
@@ -1483,8 +1486,8 @@ a {
   }
 
   .footer-logo {
-    width: 100px !important;
-    height: 34px !important;
+    width: 100px;
+    height: 27px;
   }
 
   .footer-social-networks-list {
@@ -1556,6 +1559,10 @@ a {
 }
 
 @media only screen and (max-width:750px) {
+  .body {
+    padding-top: 75px;
+  }
+
   .header {
     padding: 20px 0;
   }
@@ -1801,6 +1808,7 @@ a {
     overflow-y: auto;
     display: block;
     padding: 40px;
+    border-radius: 0;
   }
 
   .image-creation-dark-filter {
@@ -1835,6 +1843,11 @@ a {
 @media only screen and (max-width:600px) {
   .hamburger-btn {
     transform: scale(0.88);
+  }
+
+  .index-title,
+  .cta-title {
+    font-size: 28px;
   }
 
   .hero-main-details {
@@ -1891,14 +1904,15 @@ a {
     padding: 10px 0;
   }
 
-  h2 {
-    font-size: 27px;
-  }
-
   .cta-section,
   .images-section,
   .hero {
     padding: 40px 0;
+  }
+
+  .index-title,
+  .cta-title {
+    font-size: 27px;
   }
 
   .index-title~p,
@@ -1931,7 +1945,7 @@ a {
 
 @media only screen and (max-width:470px) {
   .body {
-    padding-top: 55px;
+    padding-top: 63px;
   }
 
   .container {
@@ -1939,7 +1953,7 @@ a {
   }
 
   .header {
-    padding: 10px 0;
+    padding: 14px 0;
   }
 
   .cta-section,
@@ -2097,16 +2111,6 @@ a {
 }
 
 @media only screen and (max-width:400px) {
-  .body {
-    padding-top: 50px;
-  }
-
-  .header-logo,
-  .header-logo-link {
-    width: 100px;
-    height: 26px;
-  }
-
   .hamburger-btn {
     transform: scale(0.8);
   }
@@ -2126,8 +2130,11 @@ a {
     left: -16px;
   }
 
-  h2 {
-    font-size: 22px;
+  .index-title,
+  .cta-title,
+  .images-section h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
   }
 
   .page-card-child {
@@ -2182,13 +2189,32 @@ a {
     margin-right: 12px;
   }
 
+  .images-list-child-bottom h3 {
+    font-size: 16px;
+  }
+
+  .display-image-btn,
+  .create-image-btn {
+    padding: 6px 0;
+  }
+
+  .image-icon,
+  .add-image-icon {
+    width: 20px;
+    height: 20px;
+  }
+
   .image-creation-place {
-    padding: 0;
+    padding: 25px 0 0 0;
     background: #9700FF;
   }
 
   .image-creation-place-child {
     border-radius: 0px;
+  }
+
+  .main-image {
+    border-radius: 0;
   }
 
   .create-image-form {
@@ -2199,6 +2225,11 @@ a {
   .name-adder-btn,
   .image-downloader-link {
     margin-top: 16px;
+  }
+
+  .name-adder-btn,
+  .image-downloader-link {
+    background: #5b00c380;
   }
 }
 
