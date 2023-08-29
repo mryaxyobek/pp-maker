@@ -2,12 +2,13 @@ import { listInformations } from './listInformations.js';
 
 // loader 
 const elLoader = document.querySelector('.loader');
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded',function(){
     elLoader.classList.remove('hidden');
 });
 window.onload = () => {
-    elLoader.classList.add('hidden');
+    setTimeout(function () {
+        elLoader.classList.add('hidden');
+    }, 1000);
 };
 
 // header and top btn
@@ -238,8 +239,12 @@ createImageBtn.forEach(function (e) {
 });
 const elImgSectionP = document.querySelector('.images-section-description');
 
-if (window.width > 600) {
-    elImgSectionP.textContent = "Profilingiz uchun quyidagi yoqtirgan rasmingizni tanlab ismingizni kiriting va rasmni yuklab oling.O'g'il bollar uchun o'ng tomondagi tugmani bosishingiz mumkin.";
+if (elImgSectionP) {
+    if (window.width > 600) {
+        elImgSectionP.textContent = "Profilingiz uchun quyidagi yoqtirgan rasmingizni tanlab ismingizni kiriting va rasmni yuklab oling.O'g'il bollar uchun o'ng tomondagi tugmani bosishingiz mumkin.";
+    } else {
+        elImgSectionP.textContent = "Profilingiz uchun quyidagi yoqtirgan rasmingizni tanlab ismingizni kiriting va rasmni yuklab oling"
+    }
 } else {
-    elImgSectionP.textContent = "Profilingiz uchun quyidagi yoqtirgan rasmingizni tanlab ismingizni kiriting va rasmni yuklab oling"
+    console.log('images section <p></p> is not defined')
 }
