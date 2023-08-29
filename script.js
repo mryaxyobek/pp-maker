@@ -1,4 +1,15 @@
 import { listInformations } from './listInformations.js';
+
+// loader 
+const elLoader = document.querySelector('.loader');
+
+document.addEventListener('DOMContentLoaded', function () {
+    elLoader.classList.remove('hidden');
+});
+window.onload = () => {
+    elLoader.classList.add('hidden');
+};
+
 // header and top btn
 const elHeader = document.querySelector('.header');
 const elHeaderLogo = document.querySelector('.header-logo');
@@ -229,6 +240,6 @@ const elImgSectionP = document.querySelector('.images-section-description');
 
 if (window.width > 600) {
     elImgSectionP.textContent = "Profilingiz uchun quyidagi yoqtirgan rasmingizni tanlab ismingizni kiriting va rasmni yuklab oling.O'g'il bollar uchun o'ng tomondagi tugmani bosishingiz mumkin.";
-}else{
+} else {
     elImgSectionP.textContent = "Profilingiz uchun quyidagi yoqtirgan rasmingizni tanlab ismingizni kiriting va rasmni yuklab oling"
 }
