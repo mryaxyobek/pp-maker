@@ -207,7 +207,7 @@ Promise.all(fontPromises).then((fonts) => {
                     // class 
                     elIMageDownloadAnm.classList.add('hidden');
                     elDownLoadBtn.previousElementSibling.classList.remove('circle-load-notafication');
-                }, 5000);
+                }, 300);
             };
 
             elCreationIMageWrapper.classList.remove('hidden-2');
