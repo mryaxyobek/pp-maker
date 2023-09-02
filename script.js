@@ -311,7 +311,7 @@ Promise.all(fontPromises).then((fonts) => {
             function defaultForm() {
                 elNameInput.value = '';
                 elFFChanger.value = 'Poppins';
-                elDownLoadBtn.removeAttribute('href');
+                // elDownLoadBtn.removeAttribute('href');
                 elNameInput.parentElement.parentElement.childNodes[1].classList.remove('success');
                 elFFChanger.style.fontFamily = elFFChanger.value;
                 elDownLoadBtn.classList.remove('download-notification');
