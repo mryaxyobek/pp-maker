@@ -1643,6 +1643,10 @@ a {
   .create-image-form p {
     font-size: 12px !important;
   }
+
+  .image-downloader-link::after {
+    display: none;
+  }
 }
 
 @media only screen and (max-width:900px) {

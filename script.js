@@ -303,7 +303,7 @@ Promise.all(fontPromises).then((fonts) => {
                     setTimeout(function () {
                         console.log(elNameAdderBtn.previousElementSibling.disabled);
                         defaultForm();
-                    }, 300);
+                    }, 1000);
                 };
             });
 
