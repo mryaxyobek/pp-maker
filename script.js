@@ -285,10 +285,10 @@ Promise.all(fontPromises).then((fonts) => {
                     // add text 
                     context.font = `100px ${elFFChanger.value}`;
                     let textWidth = 1500 - context.measureText(elNameInput.value).width;
-                    let textLocation = textWidth - textWidth / 2;
+                    let textXLocation = textWidth - textWidth / 2;
                     context.clearRect(0, 0, 1500, 1500);
                     context.drawImage(canvasImage, 0, 0, 1500, 1500);
-                    context.fillText(elNameInput.value, textLocation, 1265);
+                    context.fillText(elNameInput.value, textXLocation, 1250);
 
                     // canvas to data URl 
                     const canvasDataUrl = canvas.toDataURL("image/png");
@@ -311,7 +311,7 @@ Promise.all(fontPromises).then((fonts) => {
             function defaultForm() {
                 elNameInput.value = '';
                 elFFChanger.value = 'Poppins';
-                // elDownLoadBtn.removeAttribute('href');
+                elDownLoadBtn.removeAttribute('href');
                 elNameInput.parentElement.parentElement.childNodes[1].classList.remove('success');
                 elFFChanger.style.fontFamily = elFFChanger.value;
                 elDownLoadBtn.classList.remove('download-notification');
