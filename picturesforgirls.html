@@ -12,13 +12,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://pp-maker.netlify.app/" />
     <meta property="og:image" content="https://pp-maker.netlify.app/images/PPmaker-logo.png" />
-    <meta property="og:image:width" content="150" />
-    <meta property="og:image:height" content="51" />
+    <meta property="og:image:width" content="450" />
+    <meta property="og:image:height" content="153" />
     <meta property="og:image:type" content="image/png" />
 
     <!-- favicon image -->
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/shortcut-favicon.png" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <!-- Google -->
     <meta name="google-site-verification" content="xnrkEfCIngnJzvAAFmne3nA1okjknAaHAdsMH6slK7M" />
     <meta name="googlebot" id="googlebot" content="index, follow">
@@ -32,6 +32,10 @@
     <!-- css  -->
     <link rel="stylesheet" href="./css/p.css">
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- fonts  -->
+    <link rel="stylesheet" href="./fonts/Hadnich.ttf">
+    <link rel="stylesheet" href="./fonts/Akhilona.ttf">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-69QP9GDFCW"></script>
@@ -220,27 +224,46 @@
                         </div>
                     </div>
                     <form class="create-image-form">
-                        <h3>Eslatma!</h3>
-                        <p>Iltimos rasm yuklab olingunicha kuting, internetingiz sifatini iloji boricha yaxshilang</p>
+                        <p>
+                            <img src="./images/warning-circle-icon.svg" alt="">
+                            <span>Diqqat! Rasm yuklangunicha kuting, tugmalarni ko'p bosishingiz brauzeringiz qotishiga olib kelishi mumkin
+                            </span>
+                        </p>
                         <div class="name-input-wrapper">
-                            <input maxlength="16" title="ism kiritish uchun" autocomplete="off" required placeholder="."
-                                id="name-input" type="text" class="name-input">
-                            <label class="name-input-placeholder" for="name-input">Ismingizni kiriting</label>
+                            <div><span>1</span></div>
+                            <div>
+                                <input maxlength="16" title="ism kiritish uchun" autocomplete="off" required
+                                    placeholder="ismingizni kiriting" type="text" class="name-input">
+                            </div>
                         </div>
-                        <select required title="fontning turini tanlash" class="font-family-changer">
-                            <option disabled selected>Font turini tanlang</option>
-                            <option>Poppins</option>
-                            <option>Roboto</option>
-                        </select>
-                        <button type="submit" title="ismni rasmga joylab beruvchi tugma" class="name-adder-btn">
-                            <span>Ismni qo'shish</span>
-                            <img width="18" height="18" src="./images/text-icon.svg" alt="plus icon">
-                        </button>
-                        <a title="rasmni yuklab beruvchi tugma" href="./images/3dboy-image.png"
-                            download="image-download-via__pp-maker.netlify.app.jpg" class="image-downloader-link">
-                            <span>Yuklab olish</span>
-                            <img width="19" height="19" src="./images/download-image-icon.svg" alt="plus icon">
-                        </a>
+
+                        <div class="ff-changer-wrapper">
+                            <div class="success"><span>2</span></div>
+                            <div>
+                                <select required title="fontning turini tanlash" class="font-family-changer">
+                                    <option>Poppins</option>
+                                    <option>Hadnich</option>
+                                    <option>Akhilona</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="name-adder-btn-wrapper">
+                            <button disabled type="button">3</button>
+                            <button  disabled type="submit" title="ismni rasmga joylab beruvchi tugma" class="name-adder-btn">
+                                <span>Ismni qo'shish</span>
+                                <img width="18" height="18" src="./images/text-icon.svg" alt="plus icon">
+                            </button>
+                        </div>
+
+                        <div class="image-downloader-link-wrapper">
+                            <button type="button" disabled class="circle-load-notafication"><span>4</span></button>
+                            <a linkDisabled title="rasmni yuklab beruvchi tugma" href="./images/PPmaker-logo.png"
+                                download="image-download-via__pp-maker.netlify.app.jpg" class="image-downloader-link">
+                                <span>Yuklab olish</span>
+                                <img width="19" height="19" src="./images/download-image-icon.svg" alt="plus icon">
+                            </a>
+                        </div>
                     </form>
                 </div>
             </div>

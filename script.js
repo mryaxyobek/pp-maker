@@ -1,8 +1,12 @@
-import { listInformations } from './listInformations.js';
+// sayt kodlaridan foydalansangiz, tegishli joylarga manba va sayt ma'lumotlarini yozib qo'ying, yo'qsa men rozi emasman
 
-// loader 
+// if you use site codes, please credit the source and site information in the appropriate places, otherwise I disagree
+
+// если вы используете коды сайта, укажите источник и информацию о сайте в соответствующих местах, в противном случае я не согласен
+
+import { listInformations } from './listInformations.js';
 const elLoader = document.querySelector('.loader');
-document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded', function () {
     elLoader.classList.remove('hidden');
 });
 window.onload = () => {
@@ -10,15 +14,10 @@ window.onload = () => {
         elLoader.classList.add('hidden');
     }, 1000);
 };
-
-// header and top btn
 const elHeader = document.querySelector('.header');
 const elHeaderLogo = document.querySelector('.header-logo');
 const elHeaderLogoLink = document.querySelector('.header-logo-link');
-
-//top btn 
 const elTopBtn = document.querySelector('.top-btn');
-
 window.addEventListener('scroll', function () {
     if (window.scrollY > 60) {
         elHeader.classList.add('small-header');
@@ -32,7 +31,6 @@ window.addEventListener('scroll', function () {
         elTopBtn.style.display = 'none';
     };
 });
-
 elTopBtn.addEventListener('click', function () {
     window.scrollTo({
         top: 0,
@@ -44,10 +42,7 @@ elTopBtn.addEventListener('click', function () {
         elTopBtn.classList.remove('top-to-bottom');
     }, 800);
 });
-
-// dark mode 
 const elDarkModeBtn = document.querySelector('.js-dark-mode-btn');
-
 elDarkModeBtn.addEventListener('click', () => {
     elDarkModeBtn.disabled = true;
     setTimeout(function () {
@@ -61,7 +56,6 @@ elDarkModeBtn.addEventListener('click', () => {
     elDarkModeBtn.childNodes[1].classList.toggle('sun-animation');
     elDarkModeBtn.childNodes[5].classList.toggle('sun-animation');
 });
-
 document.addEventListener('DOMContentLoaded', () => {
     const darkMode = localStorage.getItem('darkMode');
     if (darkMode === 'true') {
@@ -71,12 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
         elDarkModeBtn.childNodes[5].classList.remove('remove-intial-animation', 'sun-animation');
     }
 });
-
-// navbar menu 
 const elHamburgerBtn = document.querySelector('.hamburger-btn');
 const elDarkFilter = document.querySelector('.dark-filter');
 const elHeaderNav = document.querySelector('.header-nav');
-
 elHamburgerBtn.addEventListener('click', function () {
     elHamburgerBtn.classList.toggle('hamburger-menu-active');
     elHeaderNav.classList.toggle('header-nav-active');
@@ -97,14 +88,11 @@ function removeNavbar() {
     document.body.classList.remove('overflow-hidden');
     elDarkFilter.classList.remove('dark-filter-active');
 };
-
-// main cards link
 const elPageCardChilds = document.querySelectorAll('.page-card-child');
 const elPageCardNo1 = document.querySelector('.page-card-child-number-1');
 const elPageCardNo2 = document.querySelector('.page-card-child-number-2');
 const elPageCardNo3 = document.querySelector('.page-card-child-number-3');
 const elPageCardNo4 = document.querySelector('.page-card-child-number-4');
-
 elPageCardChilds.forEach(function (e) {
     e.addEventListener('click', function () {
         e.children[0].children[1].classList.add('shooting');
@@ -113,7 +101,6 @@ elPageCardChilds.forEach(function (e) {
         }, 700);
     });
 });
-
 if (elPageCardNo1) {
     elPageCardNo1.addEventListener('click', function () {
         setTimeout(function () {
@@ -136,11 +123,9 @@ if (elPageCardNo1) {
         }, 500);
     });
 } else {
-    console.log('Page Card link Child Not Found(121=>)');
+    console.log('Page Card Link Child Not Found =>');
 }
-
 const elImagesList = document.querySelector('.images-list');
-
 if (elImagesList) {
     listInformations.map(e => {
         elImagesList.innerHTML += `<li class="images-list-child">
@@ -164,87 +149,185 @@ if (elImagesList) {
     })
 };
 
-// 
 const elMainImage = document.querySelector('.main-image');
 const elIMageDownloadAnm = document.querySelector('.image-download-animation');
 const elCreationImageDarkFilter = document.querySelector('.image-creation-dark-filter');
 const createImageBtn = document.querySelectorAll('.create-image-btn');
 
-createImageBtn.forEach(function (e) {
-    e.addEventListener('click', function () {
-        const elCreationIMageWrapper = document.querySelector('.image-creation-wrapper');
-        const elCloseIMageCreationBtn = document.querySelector('.close-image-creation-wrapper-window-btn');
-        // 
-        elMainImage.setAttribute('src', `${e.getAttribute('quality-image')}`);
-        //  
-        elIMageDownloadAnm.classList.remove('hidden');
-        // 
-        elMainImage.onload = () => {
-            setTimeout(function () {
-                elIMageDownloadAnm.classList.add('hidden');
-            }, 500);
-        };
-        // 
-        elCreationIMageWrapper.classList.remove('hidden-2');
-        elCreationImageDarkFilter.classList.remove('hidden');
-        document.body.classList.add('overflow-hidden');
-        // 
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') {
+const fontPromises = [
+    new FontFace('Hadnich', 'url(./fonts/Hadnich.ttf)').load(),
+    new FontFace('Akhilona', 'url(./fonts/Akhilona.ttf)').load(),
+    new FontFace('Poppins', 'url(./fonts/poppins/Poppins-SemiBold.ttf)').load()
+];
+
+Promise.all(fontPromises).then((fonts) => {
+    fonts.forEach((font) => {
+        document.fonts.add(font);
+    });
+    const elFFChanger = document.querySelector('.font-family-changer');
+    const elFFChangerChild = elFFChanger.querySelectorAll('option');
+    const elImageForm = document.querySelector('.create-image-form');
+    const elNameInput = document.querySelector(".name-input");
+    let elDownLoadBtn = document.querySelector(".image-downloader-link");
+    let elNameAdderBtn = document.querySelector(".name-adder-btn");
+    const elCreationIMageWrapper = document.querySelector('.image-creation-wrapper');
+    const elCloseIMageCreationBtn = document.querySelector('.close-image-creation-wrapper-window-btn');
+
+    // font family changer 
+    elFFChanger.addEventListener('change', function () {
+        elFFChanger.style.fontFamily = elFFChanger.value;
+        elDownLoadBtn.removeAttribute('href');
+        elDownLoadBtn.classList.remove('download-notification');
+        elDownLoadBtn.previousElementSibling.classList.remove('success');
+        elNameAdderBtn.previousElementSibling.classList.remove('success');
+        elNameAdderBtn.previousElementSibling.disabled = true;
+    });
+
+    // font family changer child font family style
+    elFFChangerChild.forEach(function (e) {
+        e.style.fontFamily = e.value;
+    });
+
+    // image creator button
+    createImageBtn.forEach(function (e) {
+        e.addEventListener('click', function () {
+            elDownLoadBtn.removeAttribute('href');
+            elNameAdderBtn.previousElementSibling.disabled = true;
+            elDownLoadBtn.previousElementSibling.disabled = true;
+            elMainImage.setAttribute('src', `${e.getAttribute('quality-image')}`);
+            elDownLoadBtn.previousElementSibling.classList.add('circle-load-notafication');
+            elIMageDownloadAnm.classList.remove('hidden');
+
+            // main image loader
+            elMainImage.onload = () => {
+                setTimeout(function () {
+                    elNameAdderBtn.disabled = false;
+                    elDownLoadBtn.previousElementSibling.disabled = false;
+
+                    // class 
+                    elIMageDownloadAnm.classList.add('hidden');
+                    elDownLoadBtn.previousElementSibling.classList.remove('circle-load-notafication');
+                }, 5000);
+            };
+
+            elCreationIMageWrapper.classList.remove('hidden-2');
+            elCreationImageDarkFilter.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+
+            // close this window (escape key)       
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    elCreationIMageWrapper.classList.add('hidden-2');
+                    elCreationImageDarkFilter.classList.add('hidden');
+                    document.body.classList.remove('overflow-hidden');
+                    elDownLoadBtn.previousElementSibling.classList.remove('circle-load-notafication');
+                    elNameAdderBtn.disabled = true;
+                    defaultForm()
+                };
+            });
+
+            // close this window (backdropfilter)
+            elCreationImageDarkFilter.addEventListener('click', function () {
                 elCreationIMageWrapper.classList.add('hidden-2');
                 elCreationImageDarkFilter.classList.add('hidden');
                 document.body.classList.remove('overflow-hidden');
-            } else { console.log('image creation place not found'); };
-        });
-        elCreationImageDarkFilter.addEventListener('click', function () {
-            elCreationIMageWrapper.classList.add('hidden-2');
-            elCreationImageDarkFilter.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        });
-        //     
-        elCloseIMageCreationBtn.addEventListener('click', function () {
-            elCreationIMageWrapper.classList.add('hidden-2');
-            elCreationImageDarkFilter.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        });
-        // draw image
-        let elNameInput = document.querySelector(".name-input");
-        let elDownLoadBtn = document.querySelector(".image-downloader-link");
+                elDownLoadBtn.previousElementSibling.classList.remove('circle-load-notafication');
+                elNameAdderBtn.disabled = true;
+                defaultForm();
+            });
 
-        let canvas = document.createElement('canvas');
-        let context = canvas.getContext("2d");
-        canvas.width = '1500';
-        canvas.height = '1500';
+            // close this window (x button) 
+            elCloseIMageCreationBtn.addEventListener('click', function () {
+                elCreationIMageWrapper.classList.add('hidden-2');
+                elCreationImageDarkFilter.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+                elDownLoadBtn.previousElementSibling.classList.remove('circle-load-notafication');
+                elNameAdderBtn.disabled = true;
+                defaultForm();
+            });
 
-        let canvasImage = new Image();
-        canvasImage.src = `${e.getAttribute('quality-image')}`
-        canvasImage.onload = function () {
+
+            // name input 
+            elNameInput.addEventListener('input', function () {
+                if (elNameInput.value === '') {
+                    elNameInput.parentElement.parentElement.childNodes[1].classList.remove('success');
+                } else {
+                    elNameInput.parentElement.parentElement.childNodes[1].classList.add('success');
+                }
+                elNameAdderBtn.previousElementSibling.classList.remove('success');
+                elDownLoadBtn.classList.remove('download-notification');
+                elDownLoadBtn.previousElementSibling.classList.remove('success');
+                elDownLoadBtn.removeAttribute('href');
+                elNameAdderBtn.previousElementSibling.disabled = true;
+            });
+
+            // CANVAS 
+            let canvas = document.createElement('canvas');
+            let context = canvas.getContext("2d");
+            canvas.width = '1500';
+            canvas.height = '1500';
+
+            let canvasImage = new Image();
+            canvasImage.src = `${e.getAttribute('quality-image')}`
             context.drawImage(canvasImage, 0, 0, canvas.width, canvas.height);
-            context.font = "100px sans-serif";
-        };
-        let elImageForm = document.querySelector('.create-image-form');
-        elImageForm.addEventListener('submit', function (e) {
-            e.preventDefault();
 
-            let ming = 1500 - context.measureText(elNameInput.value).width;
-            let ming2 = ming - ming / 2;
-            context.clearRect(0, 0, 1500, 1500);
-            context.drawImage(canvasImage, 0, 0, 1500, 1500);
-            context.fillText(elNameInput.value, ming2, 1265);
+            // form submit
+            elImageForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (elDownLoadBtn.previousElementSibling.disabled === false) {
+                    elNameAdderBtn.previousElementSibling.disabled = false;
 
-            const canvasDataUrl = canvas.toDataURL("image/png");
-            elDownLoadBtn.href = `${canvasDataUrl}`
+                    // add class success
+                    elNameAdderBtn.previousElementSibling.classList.add('success');
+                    elDownLoadBtn.previousElementSibling.classList.add('success');
+                    elDownLoadBtn.classList.add('download-notification');
+
+                    // add text 
+                    context.font = `100px ${elFFChanger.value}`;
+                    let textWidth = 1500 - context.measureText(elNameInput.value).width;
+                    let textLocation = textWidth - textWidth / 2;
+                    context.clearRect(0, 0, 1500, 1500);
+                    context.drawImage(canvasImage, 0, 0, 1500, 1500);
+                    context.fillText(elNameInput.value, textLocation, 1265);
+
+                    // canvas to data URl 
+                    const canvasDataUrl = canvas.toDataURL("image/png");
+                    elDownLoadBtn.setAttribute('href', `${canvasDataUrl}`);
+                };
+            });
+
+            // img downloader
+            elDownLoadBtn.addEventListener('click', function () {
+                if (elNameAdderBtn.previousElementSibling.disabled === false) {
+                    console.log(elNameAdderBtn.previousElementSibling.disabled);
+                    setTimeout(function () {
+                        console.log(elNameAdderBtn.previousElementSibling.disabled);
+                        defaultForm();
+                    }, 300);
+                };
+            });
+
+            // form all childs default status function
+            function defaultForm() {
+                elNameInput.value = '';
+                elFFChanger.value = 'Poppins';
+                elDownLoadBtn.removeAttribute('href');
+                elNameInput.parentElement.parentElement.childNodes[1].classList.remove('success');
+                elFFChanger.style.fontFamily = elFFChanger.value;
+                elDownLoadBtn.classList.remove('download-notification');
+                elDownLoadBtn.previousElementSibling.classList.remove('success');
+                elNameAdderBtn.previousElementSibling.classList.remove('success');
+                elNameAdderBtn.previousElementSibling.disabled = true;
+            };
         });
     });
-});
-const elImgSectionP = document.querySelector('.images-section-description');
 
-if (elImgSectionP) {
-    if (window.width > 600) {
-        elImgSectionP.textContent = "Profilingiz uchun quyidagi yoqtirgan rasmingizni tanlab ismingizni kiriting va rasmni yuklab oling.O'g'il bollar uchun o'ng tomondagi tugmani bosishingiz mumkin.";
-    } else {
-        elImgSectionP.textContent = "Profilingiz uchun quyidagi yoqtirgan rasmingizni tanlab ismingizni kiriting va rasmni yuklab oling"
-    }
-} else {
-    console.log('images section <p></p> is not defined')
-}
+    // image download with ctrl+enter 
+    document.addEventListener("keydown", function (event) {
+        if (event.ctrlKey && event.key === "Enter") {
+            if (elNameAdderBtn.previousElementSibling.disabled === false) {
+                elDownLoadBtn.click();
+            };
+        };
+    });
+});
