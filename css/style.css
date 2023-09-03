@@ -917,9 +917,13 @@ a {
   margin-bottom: 40px;
 }
 
-.images-section-description-wrapper p {
+.images-section-description {
   font-family: poppins-500;
   max-width: 600px;
+}
+
+.images-section-description span:last-child {
+  display: none;
 }
 
 .images-section-description-wrapper a {
@@ -1738,7 +1742,7 @@ a {
 
   .index-title~p,
   .cta-title~p,
-  .images-section-description-wrapper p {
+  .images-section-description {
     max-width: 600px;
     line-height: 22px;
   }
@@ -1842,7 +1846,7 @@ a {
 }
 
 @media only screen and (max-width:800px) {
-  .images-section-description-wrapper p {
+  .images-section-description {
     max-width: 500px;
   }
 }
@@ -1990,7 +1994,7 @@ a {
     max-width: 420px;
   }
 
-  .images-section-description-wrapper p {
+  .images-section-description {
     max-width: 400px !important;
   }
 
@@ -2195,13 +2199,22 @@ a {
     font-size: 24px;
   }
 
-  .images-section-description-wrapper p {
-    max-width: 600px !important;
-    margin: 0 !important;
+  .images-section-description-wrapper {
+    flex-direction: column;
+    align-items: start;
   }
 
-  .images-section-description-wrapper a {
+  .images-section-description {
+    max-width: max-content !important;
+    margin: 0 0 12px !important;
+  }
+
+  .images-section-description span:first-child {
     display: none;
+  }
+
+  .images-section-description span:last-child {
+    display: inline;
   }
 
   .hero-bottom {
@@ -2256,7 +2269,7 @@ a {
 
   .index-title~p,
   .cta-title~p,
-  .images-section-description-wrapper p {
+  .images-section-description {
     max-width: 550px;
     font-size: 15px !important;
     margin-bottom: 30px;
@@ -2282,7 +2295,7 @@ a {
   }
 
   .hero-breadcrumb {
-    margin: 32px 0px;
+    margin: 0 0 28px 0px;
     margin-left: 0;
   }
 
@@ -2326,7 +2339,6 @@ a {
   .cta-title~p {
     margin-bottom: 20px;
   }
-
 
   .image-count-info {
     border-radius: 40px 0;
@@ -2464,10 +2476,25 @@ a {
   }
 
   .hero-breadcrumb {
-    margin-left: 14px;
+    padding: 24px 14px;
+    margin: 0;
   }
-  .header-list-child a{
+
+  .header-list-child a {
     font-size: 13px;
+  }
+
+  .breadcrumb {
+    max-width: 470px;
+    overflow-y: auto;
+  }
+
+  .breadcrumb-child {
+    min-width: max-content !important;
+  }
+
+  .images-section-description-wrapper a {
+    padding: 8px 18px;
   }
 }
 
@@ -2579,6 +2606,14 @@ a {
   .font-family-changer {
     font-size: 13px;
     line-height: normal;
+  }
+
+  .breadcrumb-child a {
+    font-size: 13px;
+  }
+
+  .images-section-description-wrapper a {
+    border-radius: 6px;
   }
 }
 
