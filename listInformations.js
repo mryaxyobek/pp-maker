@@ -1,4 +1,4 @@
-export const listInformations = [
+export const picsForGirls = [
     {
         id: 1,
         imgSrc: './images/cartoon-girl(uploaded-profil-uchun-rasmlar.netlify.app)-compresse-image.jpg',
@@ -35,4 +35,42 @@ export const listInformations = [
         qualityImgSrc: './images/yellow-hat(girl)-quality-image.jpg',
         title: "Sariq qalpoqli qiz",
     },
+];
+export const picsForBoys = [
+    {
+        id: 1,
+        imgSrc: './images/bad-boy(boy).jpg',
+        qualityImgSrc: './images/bad-boy(boy)-quality-image.jpg',
+        title: 'Multik qiz',
+    },
+    {
+        id: 2,
+        imgSrc: './images/boy(boy).jpg',
+        qualityImgSrc: './images/boy(boy)-quality-image.jpg',
+        title: "To'qko'k hijobli qiz",
+    },
+    {
+        id: 3,
+        imgSrc: './images/red-hacker(boy).jpg',
+        qualityImgSrc: './images/red-hacker(boy)-quality-image.jpg',
+        title: "Ko'k hijobli qiz",
+    },
+    {
+        id: 4,
+        imgSrc: './images/black-mask(boy).jpg',
+        qualityImgSrc: './images/black-mask(boy)-quality-image.jpg',
+        title: "Ko'k hijobli qiz",
+    },
+    {
+        id: 5,
+        imgSrc: './images/black-stopwatch(boy).jpg',
+        qualityImgSrc: './images/black-stopwatch(boy)-quality-image.jpg',
+        title: "Ko'k hijobli qiz",
+    },
+    {
+        id: 6,
+        imgSrc: './images/white-earphone(boy).jpg',
+        qualityImgSrc: './images/white-earphone(boy)-quality-image.jpg',
+        title: "Ko'k hijobli qiz",
+    }
 ];
