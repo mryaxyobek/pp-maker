@@ -41,36 +41,36 @@ export const picsForBoys = [
         id: 1,
         imgSrc: './images/bad-boy(boy).jpg',
         qualityImgSrc: './images/bad-boy(boy)-quality-image.jpg',
-        title: 'Multik qiz',
+        title: 'Bad boy',
     },
     {
         id: 2,
         imgSrc: './images/boy(boy).jpg',
         qualityImgSrc: './images/boy(boy)-quality-image.jpg',
-        title: "To'qko'k hijobli qiz",
+        title: "Sigma boy",
     },
     {
         id: 3,
         imgSrc: './images/red-hacker(boy).jpg',
         qualityImgSrc: './images/red-hacker(boy)-quality-image.jpg',
-        title: "Ko'k hijobli qiz",
+        title: "Red hacker",
     },
     {
         id: 4,
         imgSrc: './images/black-mask(boy).jpg',
         qualityImgSrc: './images/black-mask(boy)-quality-image.jpg',
-        title: "Ko'k hijobli qiz",
+        title: "Qora niqobli bola",
     },
     {
         id: 5,
         imgSrc: './images/black-stopwatch(boy).jpg',
         qualityImgSrc: './images/black-stopwatch(boy)-quality-image.jpg',
-        title: "Ko'k hijobli qiz",
+        title: "nom:(",
     },
     {
         id: 6,
         imgSrc: './images/white-earphone(boy).jpg',
         qualityImgSrc: './images/white-earphone(boy)-quality-image.jpg',
-        title: "Ko'k hijobli qiz",
+        title: "Qora kepkali bola",
     }
 ];
