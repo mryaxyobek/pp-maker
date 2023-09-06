@@ -169,8 +169,8 @@ if (elGirlsImagesList || elBoysImagesList) {
 const elBoysImgsCount = document.querySelector('.boys-images-count');
 const elGirlsImgsCount = document.querySelector('.girls-images-count');
 if (elBoysImgsCount) {
-    elGirlsImgsCount.innerHTML = `Rasmlar soni: ${picsForGirls.filter((e) => e.id).length} dona`;
-    elBoysImgsCount.innerHTML = `Rasmlar soni: ${picsForBoys.filter((e) => e.id).length} dona`;
+    elGirlsImgsCount.innerHTML = `Rasmlar soni: ${picsForGirls.filter((e) => e.id).length} ta`;
+    elBoysImgsCount.innerHTML = `Rasmlar soni: ${picsForBoys.filter((e) => e.id).length} ta`;
 };
 
 const elMainImage = document.querySelector('.main-image');
