@@ -360,6 +360,21 @@ const elImgSearchNotafication = document.querySelector('.img-search-notafication
 
 if (elSearchForm) {
     const elImgTitle = elSearchForm.nextElementSibling.querySelectorAll('.img-list-child-title');
+    const elClearText = document.querySelector('.search-input-clear-text-btn');
+    elImgSearchInput.addEventListener('input', function () {
+        if (elImgSearchInput.value === '') {
+            elClearText.classList.add('hidden');
+        } else {
+            elClearText.classList.remove('hidden');
+        };
+    });
+    elClearText.addEventListener('click', function () {
+        elImgSearchInput.value = '';
+        elCards.forEach((e) => {
+            e.style.display = 'flex';
+        });
+        elClearText.classList.add('hidden');
+    });
     elSearchForm.addEventListener('submit', function (e) {
         e.preventDefault();
         cardsWidth();
@@ -379,9 +394,9 @@ if (elSearchForm) {
                 });
             };
         });
-        if(elSearchForm.nextElementSibling.offsetHeight === 0){
+        if (elSearchForm.nextElementSibling.offsetHeight === 0) {
             elImgSearchNotafication.classList.remove('hidden');
-        }else{
+        } else {
             elImgSearchNotafication.classList.add('hidden');
         }
     });
