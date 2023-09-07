@@ -942,6 +942,38 @@ a {
   background: var(--links-color);
 }
 
+/* search  */
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.search-input-wrapper input {
+  flex-grow: 1;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid var(--violet-color);
+  border: none;
+  padding: 20px 86px 20px 20px ;
+}
+
+.search-input-wrapper button {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background: var(--violet-color);
+  border-radius: 4px;
+  border: none;
+  height: 38px;
+  width: 60px;
+  right: 6px;
+}
+
 .images-list {
   display: grid;
   grid-template-columns: auto auto auto;
