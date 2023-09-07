@@ -4,13 +4,15 @@ export const picsForGirls = [
         imgSrc: './images/cartoon-girl(uploaded-profil-uchun-rasmlar.netlify.app)-compresse-image.jpg',
         qualityImgSrc: './images/cartoon-girl(uploaded-profil-uchun-rasmlar.netlify.app)-image.jpg',
         title: 'Multik qiz',
-        color: '#000',
+        positionY: 1300,
+        color: 'red',
     },
     {
         id: 2,
         imgSrc: './images/blue-hijab(girl).jpg',
         qualityImgSrc: './images/blue-hijab(girl)-quality-image.jpg',
         title: "Ko'k hijobli qiz",
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -18,6 +20,7 @@ export const picsForGirls = [
         imgSrc: './images/darkblue-hijab(girl).jpg',
         qualityImgSrc: './images/darkblue-hijab(girl)-quality-image.jpg',
         title: "To'qko'k hijobli qiz",
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -25,6 +28,7 @@ export const picsForGirls = [
         imgSrc: './images/iphone-8(girl).jpg',
         qualityImgSrc: './images/iphone-8(girl)-quality-image.jpg',
         title: "Telefon ushlagan qiz",
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -32,6 +36,7 @@ export const picsForGirls = [
         imgSrc: './images/white-bg-with-circle-shape(girl).jpg',
         qualityImgSrc: './images/white-bg-with-circle-shape(girl)-quality-image.jpg',
         title: 'Oddiy qiz',
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -39,6 +44,7 @@ export const picsForGirls = [
         imgSrc: './images/yellow-hat(girl).jpg',
         qualityImgSrc: './images/yellow-hat(girl)-quality-image.jpg',
         title: "Sariq qalpoqli qiz",
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -46,6 +52,7 @@ export const picsForGirls = [
         imgSrc: './images/beautiful-girl-toon-img(girl).jpg',
         qualityImgSrc: './images/beautiful-girl-toon-img(girl)-quality-image.jpg',
         title: "Toon girl img",
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -53,6 +60,7 @@ export const picsForGirls = [
         imgSrc: './images/girl-with-iphonex(girl).jpg',
         qualityImgSrc: './images/girl-with-iphonex(girl)-quality-image.jpg',
         title: ":(",
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -60,6 +68,7 @@ export const picsForGirls = [
         imgSrc: './images/beautiful-girl-toon-img2(girl).jpg',
         qualityImgSrc: './images/beautiful-girl-toon-img2(girl)-quality-image.jpg',
         title: "Toon girl img2",
+        positionY: 1300,
         color: '#000',
     },
 
@@ -70,6 +79,7 @@ export const picsForBoys = [
         imgSrc: './images/bad-boy(boy).jpg',
         qualityImgSrc: './images/bad-boy(boy)-quality-image.jpg',
         title: 'Bad boy',
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -77,6 +87,7 @@ export const picsForBoys = [
         imgSrc: './images/arabic-boy(boy).jpg',
         qualityImgSrc: './images/arabic-boy(boy)-quality-image.jpg',
         title: "Arabic boy",
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -84,6 +95,7 @@ export const picsForBoys = [
         imgSrc: './images/black-stopwatch(boy).jpg',
         qualityImgSrc: './images/black-stopwatch(boy)-quality-image.jpg',
         title: "nom:(",
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -91,6 +103,7 @@ export const picsForBoys = [
         imgSrc: './images/black-mask(boy).jpg',
         qualityImgSrc: './images/black-mask(boy)-quality-image.jpg',
         title: "Qora niqobli bola",
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -98,6 +111,7 @@ export const picsForBoys = [
         imgSrc: './images/red-hacker(boy).jpg',
         qualityImgSrc: './images/red-hacker(boy)-quality-image.jpg',
         title: "Red hacker",
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -105,6 +119,7 @@ export const picsForBoys = [
         imgSrc: './images/white-earphone(boy).jpg',
         qualityImgSrc: './images/white-earphone(boy)-quality-image.jpg',
         title: "Qora kepkali bola",
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -112,6 +127,7 @@ export const picsForBoys = [
         imgSrc: './images/Islamic-couples(boy).jpg',
         qualityImgSrc: './images/Islamic-couples(boy)-quality-image.jpg',
         title: "Juftliklar",
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -119,6 +135,7 @@ export const picsForBoys = [
         imgSrc: './images/boy(boy).jpg',
         qualityImgSrc: './images/boy(boy)-quality-image.jpg',
         title: "Sigma boy",
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -126,6 +143,7 @@ export const picsForBoys = [
         imgSrc: './images/american-boy(boy).jpg',
         qualityImgSrc: './images/american-boy(boy)-quality-image.jpg',
         title: "American boy",
+        positionY: 1300,
         color: '#000',
     },
     {
@@ -133,6 +151,7 @@ export const picsForBoys = [
         imgSrc: './images/arabic-warrior(boy).jpg',
         qualityImgSrc: './images/arabic-warrior(boy)-quality-image.jpg',
         title: "Arabic warrior",
+        positionY: 1300,
         color: '#000',
     },
 ];

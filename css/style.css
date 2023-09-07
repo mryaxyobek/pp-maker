@@ -1694,11 +1694,35 @@ a {
 }
 
 @media only screen and (max-width:900px) {
+  @keyframes topBtnAnimation {
+    0% {
+      bottom: 10px;
+      opacity: 0;
+    }
+
+    100% {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+
   .top-btn {
     width: 44px;
     height: 44px;
     bottom: 30px;
     right: 30px;
+  }
+
+  @keyframes topToBottom {
+    0% {
+      bottom: 30px;
+      opacity: 1;
+    }
+
+    100% {
+      bottom: 10px;
+      opacity: 0;
+    }
   }
 
   .hero-bg {

@@ -228,9 +228,9 @@ if (elMainImage) {
 
                 // set image
                 let imgId = Number(e.parentElement.parentElement.getAttribute('key'));
-
-                const foundInformation = imgData.find((idInfo) => idInfo.id === imgId);
-                const qualityImg = foundInformation.qualityImgSrc;
+                const qualityImg = imgData.find((idInfo) => idInfo.id === imgId).qualityImgSrc;
+                const textColor = imgData.find((idInfo) => idInfo.id === imgId).color;
+                const textPositionY = imgData.find((idInfo) => idInfo.id === imgId).positionY;
                 elMainImage.setAttribute('src', `${qualityImg}`);
 
                 // CANVAS 
@@ -251,10 +251,11 @@ if (elMainImage) {
                         elDownLoadBtn.classList.add('download-notification');
                         context.font = `100px ${elFFChanger.value}`;
                         let textWidth = 1500 - context.measureText(elNameInput.value).width;
-                        let textXLocation = textWidth - textWidth / 2;
+                        let textPostionX = textWidth - textWidth / 2;
                         context.clearRect(0, 0, 1500, 1500);
                         context.drawImage(canvasImage, 0, 0, 1500, 1500);
-                        context.fillText(elNameInput.value, textXLocation, 1250);
+                        context.fillStyle = textColor;
+                        context.fillText(elNameInput.value, textPostionX, textPositionY);
                         const canvasDataUrl = canvas.toDataURL("image/png");
                         elDownLoadBtn.setAttribute('href', `${canvasDataUrl}`);
                         elNameAdderBtn.previousElementSibling.disabled = false;
