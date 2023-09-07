@@ -2153,7 +2153,8 @@ a {
   }
 
   .create-image-form {
-    width: 100%;
+    max-width: max-content;
+    width: 370px !important;
     height: 300px;
     border-radius: 0 0 8px 8px;
   }
@@ -2386,6 +2387,7 @@ a {
 
   .footer-lists-wrapper .header-list-child {
     text-align: left;
+    padding: 0;
   }
 
   .telegram-link,
@@ -2486,6 +2488,7 @@ a {
     max-width: 100vw;
     width: 100vw !important;
     padding: 20px;
+    background: transparent;
   }
 
   .hero-breadcrumb {
@@ -2606,14 +2609,12 @@ a {
   }
 
   .image-creation-place-child,
-  .create-image-form,
   .main-image {
     border-radius: 0px;
   }
 
   .create-image-form {
     padding: 10px;
-    background: transparent;
   }
 
   .font-family-changer {
