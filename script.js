@@ -145,9 +145,9 @@ if (elGirlsImagesList) {
 if (elGirlsImagesList || elBoysImagesList) {
     imgData.map(e => {
         elImagesList.innerHTML += `<li key="${e.id}" class="images-list-child">
-            <img width="378" height="378" src=${e.imgSrc} alt="cartoon girl image for profile" class="images-list-main-img">
+            <img width="386" height="386" src=${e.imgSrc} alt="cartoon girl image for profile" class="images-list-main-img">
             <div class="images-list-child-bottom">
-                <h3>${e.title}</h3>
+                <h3 class="img-list-child-title">${e.title}</h3>
                 <button class="display-image-btn">
                     <span>Rasmni ko'rish</span>
                     <svg class="image-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -351,5 +351,54 @@ if (elMainImage) {
     });
 } else {
     console.error('\x1b[91m%s\x1b[0m', 'No list of images found...');
-
 }
+
+const elSearchForm = document.querySelector('.search-input-wrapper');
+const elCards = document.querySelectorAll('.images-list-child');
+const elImgSearchInput = document.querySelector('.img-search-input');
+const elImgSearchNotafication = document.querySelector('.img-search-notafication');
+
+if (elSearchForm) {
+    const elImgTitle = elSearchForm.nextElementSibling.querySelectorAll('.img-list-child-title');
+    elSearchForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        cardsWidth();
+        const inputVal = elImgSearchInput.value.toLowerCase();
+        elImgTitle.forEach((title, index) => {
+            if (title.textContent.toLowerCase().includes(inputVal)) {
+                elCards[index].style.display = 'flex';
+            } else {
+                elCards[index].style.display = 'none';
+            };
+        });
+        elImgSearchInput.addEventListener('input', function () {
+            if (elImgSearchInput.value === '') {
+                elCards.forEach(function (e) {
+                    e.style.display = 'flex';
+                    elImgSearchNotafication.classList.add('hidden');
+                });
+            };
+        });
+        if(elSearchForm.nextElementSibling.offsetHeight === 0){
+            elImgSearchNotafication.classList.remove('hidden');
+        }else{
+            elImgSearchNotafication.classList.add('hidden');
+        }
+    });
+} else {
+    console.error('\x1b[91m%s\x1b[0m', 'Searchform not found :(');
+}
+window.addEventListener('resize', function () {
+    cardsWidth();
+});
+function cardsWidth() {
+    elCards.forEach(function (e) {
+        if (window.innerWidth > 900) {
+            let listW = elSearchForm.nextElementSibling.offsetWidth - 40;
+            e.style.width = `${listW / 3}px`;
+        } else if (window.innerWidth > 600) {
+            let listW = elSearchForm.nextElementSibling.offsetWidth - 20;
+            e.style.width = `${listW / 2}px`;
+        }
+    });
+};
