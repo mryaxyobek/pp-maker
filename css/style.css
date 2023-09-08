@@ -949,15 +949,16 @@ a {
   position: relative;
   width: 100%;
   margin-bottom: 16px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.01);
 }
 
 .search-input-wrapper input {
   width: 100%;
   height: 48px;
-  border-radius: 4px;
-  border: 1px solid var(--violet-color);
+  border-radius: 8px;
   border: none;
-  padding: 20px 98px 20px 20px;
+  padding: 20px 120px 20px 20px;
+  color: #34006c;
 }
 
 .search-input-clear-text-btn {
@@ -965,7 +966,7 @@ a {
   width: 20px;
   height: 20px;
   border: none;
-  right: 72px;
+  right: 80px;
   background: transparent;
 }
 
@@ -1000,11 +1001,11 @@ a {
   align-items: center;
   justify-content: center;
   background: var(--violet-color);
-  border-radius: 4px;
+  border-radius: 0 8px 8px 0;
   border: none;
-  height: 38px;
+  height: 48px;
   width: 60px;
-  right: 6px;
+  right: 0px;
 }
 
 .images-list {
@@ -1019,8 +1020,13 @@ a {
   flex-direction: column;
   border-radius: 8px;
   background: var(--white-to-violet);
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-  padding: 4px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.01);
+  transition: transform 0.1s linear, box-shadow 0.3s linear;
+}
+
+.images-list-child:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
 .images-list-child img:nth-child(1) {
@@ -1710,6 +1716,14 @@ a {
   display: none !important;
 }
 
+@media only screen and (max-width:1100px) {
+
+  .header-list-child a,
+  .header-list-child span {
+    font-size: 17px;
+  }
+}
+
 @media only screen and (max-width:1000px) {
   .body {
     padding-top: 88px;
@@ -1805,6 +1819,21 @@ a {
       bottom: 10px;
       opacity: 0;
     }
+  }
+
+  .header-list-child {
+    margin-right: 16px;
+  }
+
+  .header-list-child a,
+  .header-list-child span,
+  .breadcrumb-child a {
+    font-size: 16px;
+  }
+
+  .dark-mode-btn {
+    left: 10px;
+    transform: scale(0.75);
   }
 
   .hero-bg {
@@ -1956,6 +1985,15 @@ a {
   }
 }
 
+@media only screen and (max-width:850px) {
+
+  .header-list-child a,
+  .header-list-child span,
+  .breadcrumb-child a {
+    font-size: 15px;
+  }
+}
+
 @media only screen and (max-width:800px) {
   .images-section-description {
     max-width: 500px;
@@ -2006,8 +2044,8 @@ a {
   }
 
   .header-list {
-    max-width: 200px;
-    padding: 80px 20px 0;
+    max-width: 100%;
+    padding: 70px 20px 0;
     flex-direction: column;
     align-items: stretch;
     justify-content: stretch;
@@ -2018,6 +2056,21 @@ a {
   .header-list-child {
     margin-right: 0 !important;
     padding-top: 10px;
+  }
+
+  .header .header-list-child a {
+    position: relative;
+    width: 100%;
+  }
+
+  .header .header-list-child a::before {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: url(../images/left-solid-arrow-icon.svg);
+    left: 0;
+    top: calc(50% - 8px);
   }
 
   .header-list-child:not(:last-child) {
@@ -2066,22 +2119,15 @@ a {
     margin-right: 20px;
   }
 
-  .header-list-child a,
-  .header-list-child span {
-    font-size: 15px;
-  }
-
   .nav-and-darkmode-btn-wrapper {
     position: relative;
-    width: 64px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
   }
 
   .dark-mode-btn {
     position: absolute;
-    left: -8px;
-    top: -4px;
-    transform: scale(0.8);
+    left: -10px;
   }
 
   h2 {
@@ -2276,7 +2322,17 @@ a {
   }
 
   .hamburger-btn {
-    transform: scale(0.88);
+    transform: scale(0.867);
+  }
+
+  .nav-and-darkmode-btn-wrapper {
+    width: 26px;
+    height: 26px;
+  }
+
+  .dark-mode-btn {
+    left: -14px;
+    transform: scale(0.65);
   }
 
   .index-title,
@@ -2294,7 +2350,7 @@ a {
   }
 
   .breadcrumb-child a {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .hero-main-details {
@@ -2607,7 +2663,8 @@ a {
     margin: 0;
   }
 
-  .header-list-child a {
+  .header-list-child a,
+  .header-list-child span {
     font-size: 13px;
   }
 
@@ -2618,6 +2675,10 @@ a {
 
   .breadcrumb-child {
     min-width: max-content !important;
+  }
+
+  .breadcrumb-child a {
+    font-size: 13px;
   }
 
   .images-section-description-wrapper a {
@@ -2640,13 +2701,12 @@ a {
   }
 
   .nav-and-darkmode-btn-wrapper {
-    width: 48px;
+    width: 24px;
     height: 24px;
   }
 
   .dark-mode-btn {
     transform: scale(0.6);
-    top: -8px;
     left: -16px;
   }
 
@@ -2739,7 +2799,7 @@ a {
   }
 
   .breadcrumb-child a {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .images-section-description-wrapper a {
