@@ -139,7 +139,7 @@ if (elGirlsImagesList) {
     elImagesList = document.querySelector('.pics-for-boys');
     imgData = picsForBoys;
 } else {
-    console.error('\x1b[91m%s\x1b[0m', 'No space found for image data :(');
+    console.log('\x1b[91m%s\x1b[0m', 'No space found for image data :(');
 }
 
 if (elGirlsImagesList || elBoysImagesList) {
@@ -350,7 +350,7 @@ if (elMainImage) {
         };
     });
 } else {
-    console.error('\x1b[91m%s\x1b[0m', 'No list of images found...');
+    console.log('\x1b[91m%s\x1b[0m', 'No list of images found...');
 }
 
 const elSearchForm = document.querySelector('.search-input-wrapper');
@@ -401,7 +401,7 @@ if (elSearchForm) {
         }
     });
 } else {
-    console.error('\x1b[91m%s\x1b[0m', 'Searchform not found :(');
+    console.log('\x1b[91m%s\x1b[0m', 'Searchform not found :(');
 }
 window.addEventListener('resize', function () {
     cardsWidth();
