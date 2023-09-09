@@ -1613,8 +1613,8 @@ a {
   box-shadow: 0 0 0 0px #5200af66, 0 0 0 8px #5200af00;
   rotate: -90deg;
   animation: service-link-animation 3s linear infinite;
-  left: -93px;
-  top: calc(50% - 30px);
+  left: -41px;
+  bottom: 81px;
 }
 
 .service-info-link img {
@@ -1866,6 +1866,10 @@ a {
     height: 44px;
     bottom: 30px;
     right: 30px;
+  }
+
+  .service-info-link {
+    bottom: 70px;
   }
 
   @keyframes topToBottom {
@@ -2480,6 +2484,12 @@ a {
   .breadcrumb-child a {
     font-size: 14px;
   }
+
+  .service-info-link {
+    scale: 0.8;
+    left: -46px;
+    bottom: 58px;
+  }
 }
 
 @media only screen and (max-width:550px) {
@@ -2863,12 +2873,6 @@ a {
 
   .images-section-description-wrapper a {
     border-radius: 6px;
-  }
-
-  .service-info-link {
-    scale: 0.8;
-    left: -98px;
-    top: calc(50% - 30px);
   }
 }
 
