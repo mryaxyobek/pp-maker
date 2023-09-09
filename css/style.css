@@ -493,6 +493,22 @@ a {
   transition: color 0.3s ease;
 }
 
+.header .header-list-child span {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.header .header-list-child span::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: -16px;
+  rotate: -90deg;
+  background: url(../images/left-solid-arrow-icon.svg);
+}
+
 .pages-link-list,
 .wallpapers-link-list {
   visibility: hidden;
@@ -1040,7 +1056,7 @@ a {
   display: flex;
   flex-direction: column;
   background: transparent;
-  padding: 8px;
+  padding: 12px;
   border-radius: 0 0 8px 8px;
 }
 

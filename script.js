@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 window.onload = () => {
     setTimeout(function () {
         elLoader.classList.add('hidden');
-    }, 1000);
+    }, 100);
 };
 const elHeader = document.querySelector('.header');
 const elHeaderLogo = document.querySelector('.header-logo');
@@ -47,14 +47,14 @@ elTopBtn.addEventListener('click', function () {
 const elDarkModeBtn = document.querySelector('.js-dark-mode-btn');
 elDarkModeBtn.addEventListener('click', () => {
     elDarkModeBtn.disabled = true;
-    setTimeout(function () {
-        elDarkModeBtn.disabled = false;
-        document.body.classList.toggle('dark-mode');
-        elDarkModeBtn.childNodes[3].classList.toggle('shape-run');
-        elDarkModeBtn.childNodes[3].classList.add('shape-intial-animation');
-        elDarkModeBtn.childNodes[5].classList.remove('remove-intial-animation');
-        localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-    }, 500);
+
+    elDarkModeBtn.disabled = false;
+    document.body.classList.toggle('dark-mode');
+    elDarkModeBtn.childNodes[3].classList.toggle('shape-run');
+    elDarkModeBtn.childNodes[3].classList.add('shape-intial-animation');
+    elDarkModeBtn.childNodes[5].classList.remove('remove-intial-animation');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+
     elDarkModeBtn.childNodes[1].classList.toggle('sun-animation');
     elDarkModeBtn.childNodes[5].classList.toggle('sun-animation');
 });
