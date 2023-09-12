@@ -10,10 +10,12 @@ import { picsForBoys } from './listInformations.js';
 const elLoader = document.querySelector('.loader');
 document.addEventListener('DOMContentLoaded', function () {
     elLoader.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
 });
 window.onload = () => {
     setTimeout(function () {
         elLoader.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
     }, 100);
 };
 const elHeader = document.querySelector('.header');
@@ -374,6 +376,7 @@ if (elSearchForm) {
             e.style.display = 'flex';
         });
         elClearText.classList.add('hidden');
+        elImgSearchNotafication.classList.add('hidden');
     });
     elSearchForm.addEventListener('submit', function (e) {
         e.preventDefault();
