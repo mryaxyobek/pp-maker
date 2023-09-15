@@ -1158,7 +1158,7 @@ a {
 }
 
 .index-link-list-child:nth-child(1) {
-  background: linear-gradient(90deg, #0088CC, #0088cc99);
+  background: linear-gradient(90deg, #2f4753, #0088cc99);
 }
 
 .index-link-list-child:nth-child(2) {
@@ -2293,6 +2293,18 @@ a {
     top: -100px;
     right: -60px;
   }
+
+  .index-links-list-cta {
+    padding-bottom: 16px;
+  }
+
+  .index-links-list-cta .container {
+    flex-wrap: wrap;
+  }
+
+  .index-link-list-child {
+    margin-bottom: 16px;
+  }
 }
 
 @media only screen and (max-width:1000px) {
@@ -2879,6 +2891,20 @@ a {
     left: -50px;
   }
 
+  .index-link-list-child {
+    padding: 6px;
+  }
+
+  .index-link-list-child a {
+    font-size: 14px;
+  }
+
+  .index-link-list-child a svg {
+    width: 22px;
+    height: 22px;
+    margin-right: 6px !important;
+  }
+
   .image-creation-place {
     display: block;
     overflow-y: auto;
@@ -3094,8 +3120,27 @@ a {
     margin-bottom: 28px;
   }
 
-  .index-hero-links-wrapper a {
-    padding: 0 24px;
+  .index-links-list-cta {
+    padding: 24px 0;
+  }
+
+  .index-link-list-child {
+    padding: 10px;
+    margin-bottom: 0;
+  }
+
+  .index-link-list-child:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  .index-links-list-cta a svg {
+    width: 24px;
+    height: 24px;
+    margin: 0 !important;
+  }
+
+  .index-link-list-child a span {
+    display: none;
   }
 
   .index-title,
@@ -3172,7 +3217,12 @@ a {
     font-size: 21px;
     line-height: 28px;
   }
-
+  .index-links-list-cta{
+    padding-bottom:12px ;
+  }
+  .index-link-list-child{
+    margin-bottom: 12px;
+  }
   h2 {
     font-size: 23px;
   }
