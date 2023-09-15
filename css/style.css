@@ -1158,7 +1158,7 @@ a {
 }
 
 .index-link-list-child:nth-child(1) {
-  background: linear-gradient(90deg, #2f4753, #0088cc99);
+  background: linear-gradient(90deg, #0088CC, #0088cc99);
 }
 
 .index-link-list-child:nth-child(2) {
