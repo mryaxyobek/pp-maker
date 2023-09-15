@@ -931,7 +931,7 @@ a {
 
 @keyframes blob4 {
   0% {
-    rotate: 0deg;
+    transform: rotate(0);
     border-radius: 77% 23% 30% 70% / 71% 38% 62% 29%;
   }
 
@@ -948,7 +948,7 @@ a {
   }
 
   100% {
-    rotate: 360deg;
+    transform: rotate(360deg);
     border-radius: 77% 23% 30% 70% / 71% 38% 62% 29%;
   }
 }
@@ -956,7 +956,7 @@ a {
 .index-hero-bg-shape:nth-child(4) {
   background: linear-gradient(90deg, #9900ff4d, #7908fa99);
   border-radius: 77% 23% 30% 70% / 71% 38% 62% 29%;
-  animation: blob4 100s linear infinite;
+  animation: blob4 98s linear infinite;
   z-index: 1;
 }
 
@@ -983,16 +983,6 @@ a {
   height: 40px;
   border-radius: 100%;
   border: 2px solid #fff;
-}
-
-.user-circle-shape::after {
-  position: fixed;
-  content: '';
-  border-radius: 100%;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 0 6px rgba(255, 255, 255, 1);
-  /* animation: user-box-shadow 2s linear infinite; */
 }
 
 .user-head {
@@ -2820,7 +2810,6 @@ a {
   .index-hero-links-wrapper a {
     font-size: 15px;
     height: 40px;
-
   }
 
   .blur-shape2 {
