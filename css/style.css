@@ -2184,6 +2184,10 @@ a {
     font-size: 17px;
   }
 
+  .index-hero {
+    padding: 60px 0;
+  }
+
   .index-hero .container {
     grid-template-columns: auto;
     justify-content: center;
@@ -2212,6 +2216,29 @@ a {
 
   .index-hero-last-child {
     width: 100%;
+  }
+
+  .blur-shape {
+    filter: blur(120px);
+  }
+
+  .blur-shape1 {
+    left: -200px;
+    bottom: -200px;
+  }
+
+  .blur-shape2 {
+    width: 300px;
+    height: 300px;
+    left: 100px;
+    rotate: 0deg;
+  }
+
+  .blur-shape3 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: -60px;
   }
 }
 
@@ -2411,6 +2438,7 @@ a {
     font-size: 13px !important;
   }
 
+  .index-hero,
   .cta-section,
   .hero,
   .images-section {
@@ -2486,6 +2514,10 @@ a {
   .header-list-child span,
   .breadcrumb-child a {
     font-size: 15px;
+  }
+
+  .blur-shape1 {
+    filter: blur(120px);
   }
 }
 
@@ -2791,6 +2823,10 @@ a {
 
   }
 
+  .blur-shape2 {
+    left: -50px;
+  }
+
   .image-creation-place {
     display: block;
     overflow-y: auto;
@@ -2849,6 +2885,20 @@ a {
   .index-hero-links-wrapper a {
     height: 36px;
     padding: 0px 36px;
+  }
+
+  .index-hero-last-child {
+    height: 90vw;
+  }
+
+  .index-hero-image {
+    width: 65vw !important;
+    height: auto !important;
+  }
+
+  .index-hero-bg-shape {
+    width: 80vw;
+    height: 80vw;
   }
 
   .hamburger-btn {
@@ -2980,9 +3030,20 @@ a {
     margin-bottom: 8px;
   }
 
+  .index-hero .container {
+    gap: 40px;
+  }
+
   .index-hero-description {
     font-size: 14px;
+    line-height: 20px;
     margin-bottom: 32px;
+    text-align: justify;
+    margin-bottom: 28px;
+  }
+
+  .index-hero-links-wrapper a {
+    padding: 0 24px;
   }
 
   .index-title,
@@ -3033,12 +3094,12 @@ a {
 }
 
 @media only screen and (max-width:470px) {
-  .loader-child {
-    transform: scale(0.65) !important;
-  }
-
   .body {
     padding-top: 63px;
+  }
+
+  .loader-child {
+    transform: scale(0.65) !important;
   }
 
   .container {
@@ -3049,13 +3110,23 @@ a {
     padding: 14px 0;
   }
 
+  .index-hero,
   .cta-section,
   .images-section {
     padding: 30px 0;
   }
 
+  .index-hero-title {
+    font-size: 21px;
+    line-height: 28px;
+  }
+
   h2 {
     font-size: 23px;
+  }
+
+  .index-hero-links-wrapper a {
+    font-size: 14px;
   }
 
   .index-title,
@@ -3255,6 +3326,20 @@ a {
   .dark-mode-btn {
     transform: scale(0.6);
     left: -16px;
+  }
+
+  .index-hero-title {
+    font-size: 19px;
+  }
+
+  .index-hero-description {
+    font-size: 14px !important;
+  }
+
+  .index-hero-links-wrapper a {
+    font-size: 13px;
+    padding: 0 20px;
+    line-height: 16px;
   }
 
   .index-title,
