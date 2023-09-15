@@ -773,7 +773,8 @@ a {
 .index-hero-description {
   color: white;
   max-width: 590px;
-  margin-bottom: 60px;
+  margin-bottom: 52px;
+  font-size: 16px;
 }
 
 .index-hero-links-wrapper {
@@ -788,7 +789,6 @@ a {
   height: 44px;
   padding: 0 40px;
   align-items: center;
-  font-family: 'poppins-500', sans-serif;
   font-size: 16px;
   border-radius: 6px;
   color: white;
@@ -2183,6 +2183,36 @@ a {
   .header-list-child span {
     font-size: 17px;
   }
+
+  .index-hero .container {
+    grid-template-columns: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .index-hero-first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .index-hero-title {
+    max-width: 580px;
+  }
+
+  .index-hero-description {
+    max-width: 810px;
+  }
+
+  .index-hero-links-wrapper {
+    justify-content: center;
+  }
+
+  .index-hero-last-child {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width:1000px) {
@@ -2542,6 +2572,15 @@ a {
     padding-bottom: 10px;
   }
 
+  .index-hero-title {
+    font-size: 36px;
+  }
+
+  .index-hero-description {
+    max-width: 100% !important;
+    margin-bottom: 44px;
+  }
+
   .footer-lists-wrapper {
     max-width: 600px;
   }
@@ -2740,6 +2779,18 @@ a {
     transform: scale(0.8) !important;
   }
 
+  .index-hero-title {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 12px;
+  }
+
+  .index-hero-links-wrapper a {
+    font-size: 15px;
+    height: 40px;
+
+  }
+
   .image-creation-place {
     display: block;
     overflow-y: auto;
@@ -2784,6 +2835,20 @@ a {
 @media only screen and (max-width:600px) {
   .loader-child {
     transform: scale(0.7) !important;
+  }
+
+  .index-hero-title {
+    font-size: 28px;
+  }
+
+  .index-hero-description {
+    font-size: 15px !important;
+    margin-bottom: 38px;
+  }
+
+  .index-hero-links-wrapper a {
+    height: 36px;
+    padding: 0px 36px;
   }
 
   .hamburger-btn {
@@ -2903,10 +2968,21 @@ a {
     padding: 10px 0;
   }
 
+  .index-hero,
   .cta-section,
   .images-section,
   .hero {
     padding: 40px 0;
+  }
+
+  .index-hero-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .index-hero-description {
+    font-size: 14px;
+    margin-bottom: 32px;
   }
 
   .index-title,
