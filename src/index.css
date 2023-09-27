@@ -1,3 +1,128 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* global styles  */
+:root {
+  --body-color: #fff;
+  --black-222: #222;
+  --black-333: #333;
+  --violet-7A08FA: #7A08FA;
+  --orange-FF9B50: #FF9B50;
+  --pink-F508FA: #F508FA;
+  --red-CE1312: #CE1312;
+  --blue-5096FF: #5096FF;
+  --green-50FF62: #50FF62;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'poppins-medium', sans-serif;
+  color: var(--black-333);
+}
+
+/* poppins font  */
+@font-face {
+  font-family: poppins-bold;
+  src: url(./assets/fonts/poppins/Poppins-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: poppins-semibold;
+  src: url(./assets/fonts/poppins/Poppins-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: poppins-medium;
+  src: url(./assets/fonts/poppins/Poppins-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: poppins-regular;
+  src: url(./assets/fonts/poppins/Poppins-Regular.ttf);
+  font-weight: 400;
+}
+
+/* intial styles  */
+.body {
+  scroll-behavior: smooth;
+  background: var(--body-color);
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  font-family: 'poppins-bold', sans-serif;
+  color: var(--black-222);
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 64px;
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 52px;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 34px;
+  font-weight: 500;
+  font-family: 'poppins-medium', sans-serif;
+  color: var(--black-333);
+}
+
+section {
+  padding: 120px 0;
+}
+
+button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'poppins-medium', sans-serif;
+}
+
+/* class list */
+.container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.text-medium {
+  font-size: 20px;
+  line-height: 34px;
+  font-weight: 500;
+  font-family: 'poppins-medium', sans-serif;
+  color: var(--black-333);
+}
+
+a,
+.text-normal {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  font-family: 'poppins-medium', sans-serif;
+  color: var(--black-333);
+}
