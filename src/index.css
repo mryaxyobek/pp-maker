@@ -49,6 +49,9 @@
 @tailwind utilities;
 
 @layer components {
+  .container {
+    @apply max-w-1740 w-full mx-auto px-5 ;
+  }
   .flex-center {
     @apply flex items-center;
   }
@@ -63,6 +66,10 @@
 
   .rotate-icon {
     @apply rotate-180
+  }
+
+  .violet-btn {
+    @apply flex-center text-normal bg-violet text-white rounded-full py-3 px-6 font-poppins-regular;
   }
 
   .transition-transform-2 {
@@ -128,14 +135,6 @@ a {
   font-family: 'poppins-medium', sans-serif;
 }
 
-/* class list */
-.container {
-  max-width: 1280px;
-  width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
 .text-medium {
   font-size: 20px;
   line-height: 34px;
@@ -163,9 +162,29 @@ a,
 }
 
 .donate-modal_cross-button:hover .cross-icon_g {
-  color: var(--red-CE1312);
+  color: #ff6767
 }
 
 .cross-icon_g {
   color: white;
+}
+
+@keyframes index-hero_img-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.transition-bg-05 {
+  transition: background-color 0.5s linear;
+}
+
+.hero-img-animation {
+  animation: index-hero_img-animation 0.5s linear;
 }

@@ -9,10 +9,13 @@ export default {
     extend: {
       maxWidth: {
         '250': '1000px',
+        '1740': '1740px',
       },
       width: {
-        '40': '160px',
         '110': '440px',
+        '102': '408px',
+        '40': '160px',
+        '50vw': '50vw',
       },
       height: {
         '50': '200px',

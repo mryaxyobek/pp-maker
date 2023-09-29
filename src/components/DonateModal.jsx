@@ -31,7 +31,7 @@ const DonateModal = ({ setOpenDonateModal }) => {
         }
     })
     return (
-        <div className={`flex-center justify-center fixed min-h-screen min-w-full top-0 right-0 bottom-0 left-0`}>
+        <div className={`flex-center justify-center fixed min-h-screen min-w-full top-0 right-0 bottom-0 left-0 z-50`}>
             {/* filter */}
             <div onClick={() => setOpenDonateModal(false)} className="absolute top-0 right-0 bottom-0 left-0 bg-black bg-opacity-50 w-full h-full z-1"></div>
             <div className="grid grid-cols-2 gap-5 relative z-2">

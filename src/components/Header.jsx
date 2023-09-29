@@ -6,6 +6,7 @@ import sunIcon from '../assets/images/icons/sun-icon.svg';
 import moonIcon from '../assets/images/icons/moon-icon.svg';
 import walletIcon from '../assets/images/icons/wallet-icon.svg';
 import DonateModal from './DonateModal';
+
 const Header = () => {
     // hover link 
     const [hoverLink, setHoverLink] = useState(false);
@@ -27,14 +28,14 @@ const Header = () => {
     const toogleDarkMode = () => {
         setDarkMode(!darkMode);
     };
-    darkMode ? document.body.classList.add('dark') : document.body.classList.remove('dark');
+    darkMode ? document.documentElement.classList.add('dark') : document.body.classList.remove('dark');
     // donate button
     const [openDonateModal, setOpenDonateModal] = useState(false);
     const activeDonateModal = () => {
         setOpenDonateModal(true);
     };
     return (
-        <header className="header py-8 sticky w-full top-0 right-0 left- shadow">
+        <header className="header py-8 sticky w-full top-0 right-0 left- shadow z-2 bg-white bg-opacity-70 backdrop-blur-sm">
             <div className="flex container items-center justify-between">
                 {/* logo  */}
                 <Link to='/'>
@@ -107,7 +108,7 @@ const Header = () => {
                         <img width={28} height={28} className={`${darkMode ? 'hidden' : ''}`} src={moonIcon} alt="moon icon" />
                     </button>
                     {/* donate button */}
-                    <button onClick={activeDonateModal} className="p-2.5 rounded-lg bg-violet bg-opacity-10">
+                    <button onClick={activeDonateModal} className="p-2.5 rounded-lg bg-violet bg-opacity-10 hover:bg-opacity-20 transition-colors-2">
                         <img width={28} height={28} src={walletIcon} alt="wallet icon" />
                     </button>
                 </div>
