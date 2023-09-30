@@ -8,8 +8,8 @@ export default {
   theme: {
     extend: {
       maxWidth: {
+        '385': '1540px',
         '250': '1000px',
-        '1740': '1740px',
       },
       width: {
         '110': '440px',

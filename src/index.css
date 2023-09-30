@@ -50,8 +50,9 @@
 
 @layer components {
   .container {
-    @apply max-w-1740 w-full mx-auto px-5 ;
+    @apply max-w-385 w-full mx-auto px-5;
   }
+
   .flex-center {
     @apply flex items-center;
   }
