@@ -1,7 +1,4 @@
-import React, { useState } from 'react';
-import anorbankLogo from '../assets/images/icons/anorbank-logo.svg';
-import mastercardLogo from '../assets/images/icons/mastercard-logo.svg';
-import humocardLogo from '../assets/images/images/humo-logo.png';
+import React from 'react';
 const SearchModal = ({ setOpenSearchModal }) => {
     document.addEventListener('keyup', (e) => {
         if (e.key === 'Escape') {
@@ -9,7 +6,12 @@ const SearchModal = ({ setOpenSearchModal }) => {
         } else {
             console.log('donation window has not been closed');
         }
-    })
+    });
+    // form 
+    const searchFormSubmit = (e) => {
+        e.preventDefault();
+    };
+
     return (
         <div className={`flex-center justify-center fixed min-h-screen min-w-full top-0 right-0 bottom-0 left-0 z-50`}>
             {/* filter */}
@@ -24,7 +26,7 @@ const SearchModal = ({ setOpenSearchModal }) => {
                     </svg>
                 </button>
                 {/* data  */}
-                <form className='flex w-full rounded-t-lg border-b'>
+                <form onSubmit={searchFormSubmit} className='flex w-full rounded-t-lg border-b'>
                     <input type="text" placeholder='Nimani qidiramiz?' className="grow p-4 rounded-tl-lg focus:outline-none" />
                     <button className="px-5 bg-violet rounded-tr-lg">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path className='text-white' d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
