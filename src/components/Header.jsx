@@ -6,6 +6,7 @@ import sunIcon from '../assets/images/icons/sun-icon.svg';
 import moonIcon from '../assets/images/icons/moon-icon.svg';
 import walletIcon from '../assets/images/icons/wallet-icon.svg';
 import DonateModal from './DonateModal';
+import SearchModal from './SearchModal';
 
 const Header = () => {
     // hover link 
@@ -122,6 +123,10 @@ const Header = () => {
                     </button>
                 </div>
             </div>
+            {
+                openSearchModal &&
+                <SearchModal setOpenSearchModal={setOpenSearchModal}/>
+            }
             {
                 openDonateModal &&
                 <DonateModal setOpenDonateModal={setOpenDonateModal} />

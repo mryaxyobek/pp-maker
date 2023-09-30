@@ -12,6 +12,7 @@ export default {
         '250': '1000px',
       },
       width: {
+        '175': '700px',
         '110': '440px',
         '102': '408px',
         '40': '160px',
@@ -68,8 +69,8 @@ export default {
         'blue-color': '#5096FF',
         'green-color': '#50FF62',
       },
-      backgroundImage:{
-        'violet-pink':'linear-gradient(114deg, #7A08FA 0%, #CE00D2 99.18%)'
+      backgroundImage: {
+        'violet-pink': 'linear-gradient(114deg, #7A08FA 0%, #CE00D2 99.18%)'
       },
       boxShadow: {
         '25': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
