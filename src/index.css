@@ -84,6 +84,15 @@
   .bottom-icon {
     @apply transition-colors;
   }
+
+  .top_link {
+    @apply inline-block rounded-full p-1.5 border-2 border-white hover:bg-white hover:bg-opacity-20 transition-colors-2;
+  }
+
+  .white-bg-link {
+    @apply text-violet bg-white rounded-lg px-5 border-2 border-violet border-opacity-50 hover:border-white hover:bg-transparent hover:text-white transition-colors-2;
+  }
+
 }
 
 /* intial styles  */
