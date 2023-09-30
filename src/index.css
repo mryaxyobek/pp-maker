@@ -80,6 +80,10 @@
   .transition-colors-2 {
     transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, text-decoration-color 0.2s linear;
   }
+
+  .bottom-icon {
+    @apply transition-colors;
+  }
 }
 
 /* intial styles  */
@@ -188,4 +192,12 @@ a,
 
 .hero-img-animation {
   animation: index-hero_img-animation 0.5s linear;
+}
+
+:is(.bg-link:hover, .services-link:hover) .bottom-icon {
+  color: #7A08FA;
+}
+
+:is(.bg-link:hover, .services-link:hover) span {
+  color: #7A08FA;
 }

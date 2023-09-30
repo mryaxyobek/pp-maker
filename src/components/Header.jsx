@@ -28,6 +28,11 @@ const Header = () => {
     const toogleDarkMode = () => {
         setDarkMode(!darkMode);
     };
+    // search button
+    const [openSearchModal, setOpenSearchModal] = useState(false);
+    const activeSearchModal = () => {
+        setOpenSearchModal(true);
+    };
     darkMode ? document.documentElement.classList.add('dark') : document.body.classList.remove('dark');
     // donate button
     const [openDonateModal, setOpenDonateModal] = useState(false);
@@ -49,9 +54,9 @@ const Header = () => {
                                 <NavLink to='/' className='hover-text-violet'>Bosh sahifa</NavLink>
                             </li>
                             <li className='relative'>
-                                <NavLink to='/' className='flex-center'>
-                                    <span onMouseMove={activeHoverLink} onMouseLeave={unActiveHoverLink} className='mr-1 hover-text-violet'>Xizmatlar</span>
-                                    <img width={11} height={6} src={bottomArrowIcon} className={`${hoverLink ? 'rotate-icon' : ''} transition-transform-2`} alt="bottom arrow icon" />
+                                <NavLink onMouseMove={activeHoverLink} onMouseLeave={unActiveHoverLink} to='/' className='flex-center services-link hover:text-[var(--violet-7A08FA)!important]'>
+                                    <span className='mr-1 hover-text-violet'>Xizmatlar</span>
+                                    <svg className={`${hoverLink ? 'rotate-icon' : ''} transition-transform-2`} width="12" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M1.09998 1L5.49998 5L9.89998 1" className='bottom-icon' stroke='currentColor' strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></g></svg>
                                 </NavLink>
                                 {/* list  */}
                                 <ul onMouseMove={activeHoverLink} onMouseLeave={unActiveHoverLink} className={`${hoverLink ? '' : 'hidden'} shadow absolute top-full bg-white rounded-lg min-w-max p-4 space-y-3`}>
@@ -71,9 +76,9 @@ const Header = () => {
                                 </ul>
                             </li>
                             <li className='relative'>
-                                <NavLink to='/' className='flex-center'>
-                                    <span onMouseMove={activeHoverLink2} onMouseLeave={unActiveHoverLink2} className='mr-1 hover-text-violet'>Rasmlar</span>
-                                    <img width={11} height={6} src={bottomArrowIcon} className={`${hoverLink2 ? 'rotate-icon' : ''} transition-transform-2`} alt="bottom arrow icon" />
+                                <NavLink onMouseMove={activeHoverLink2} onMouseLeave={unActiveHoverLink2} to='/' className='flex-center bg-link'>
+                                    <span className='mr-1 hover-text-violet'>Rasmlar</span>
+                                    <svg className={`${hoverLink2 ? 'rotate-icon' : ''} transition-transform-2`} width="12" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M1.09998 1L5.49998 5L9.89998 1" className='bottom-icon' stroke='currentColor' strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></g></svg>
                                 </NavLink>
                                 {/* list  2*/}
                                 <ul onMouseMove={activeHoverLink2} onMouseLeave={unActiveHoverLink2} className={`${hoverLink2 ? '' : 'hidden'} shadow absolute top-full bg-white rounded-lg min-w-max p-4 space-y-3`}>
@@ -103,9 +108,13 @@ const Header = () => {
                         </ul>
                     </nav>
                     {/* dark mode button  */}
-                    <button onClick={toogleDarkMode} className="p-2.5 voice-play">
+                    <button onClick={toogleDarkMode}>
                         <img width={28} height={28} className={`${darkMode ? '' : 'hidden'}`} src={sunIcon} alt="sun icon" />
                         <img width={28} height={28} className={`${darkMode ? 'hidden' : ''}`} src={moonIcon} alt="moon icon" />
+                    </button>
+                    {/* search button  */}
+                    <button onClick={activeSearchModal}>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path className='text-violet' d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
                     </button>
                     {/* donate button */}
                     <button onClick={activeDonateModal} className="p-2.5 rounded-lg bg-violet bg-opacity-10 hover:bg-opacity-20 transition-colors-2">
