@@ -1,0 +1,53 @@
+.swiper {
+    height: 600px;
+}
+
+.swiper-child {
+    background: url(../assets/images/images/hero-bg.jpg);
+    background-size: cover;
+    border-radius: 12px;
+}
+
+.swiper:hover :is(.swiper-button-prev,
+    .swiper-button-next) {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background: #fff;
+    opacity: 0;
+    transform: scale(0) rotate(25deg);
+    transition: transform 0.3s linear, opacity 0.3s linear, ;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    transform: scale(0.5);
+    color: #7A08FA;
+}
+
+.swiper-pagination-bullet {
+    background: white;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px !important;
+    transition: scale 0.2s linear, background-color 0.2s linear, border 0.2s linear;
+}
+
+.swiper-pagination-bullet:hover {
+    scale: 1.5;
+    background: #7A08FA;
+    border: 2px solid #ffffff;
+}
+
+.swiper-pagination-bullet-active {
+    scale: 1.5;
+    background: #7A08FA;
+    border: 2px solid #ffffff;
+}
