@@ -41,7 +41,7 @@ const Header = () => {
         setOpenDonateModal(true);
     };
     return (
-        <header className="header py-8 sticky w-full top-0 right-0 left- shadow z-2 bg-white bg-opacity-70 backdrop-blur-sm">
+        <header className="header py-8 sticky w-full top-0 right-0 left-0 shadow z-5 bg-white bg-opacity-70 backdrop-blur-3xl">
             <div className="flex container items-center justify-between">
                 {/* logo  */}
                 <Link to='/'>

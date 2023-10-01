@@ -70,7 +70,8 @@ export default {
         'green-color': '#50FF62',
       },
       backgroundImage: {
-        'violet-pink': 'linear-gradient(114deg, #7A08FA 0%, #CE00D2 99.18%)'
+        'violet-pink': 'linear-gradient(180deg, #F508FA 0%, #7A08FA 100%, #6400D3 100%)',
+        'gray-white': 'linear-gradient(180deg, #F2F2F2 73.14%, rgba(242, 242, 242, 0.00) 99.91%)',
       },
       boxShadow: {
         '25': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
